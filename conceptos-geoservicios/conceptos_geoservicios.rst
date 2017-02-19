@@ -7,13 +7,12 @@ Conceptos básicos de Geoservicios
 	=================  ====================================================
 	Fecha              Autores
 	=================  ====================================================
-	14 Febrero 2017   * Wladimir Szczerban
+	14 Febrero 2017    * Wladimir Szczerban
 	=================  ====================================================
 
 	©2017 Wladimir Szczerban
 
-	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia :
-  Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
+	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
   La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya http://volaya.github.io/libro-sig/
 

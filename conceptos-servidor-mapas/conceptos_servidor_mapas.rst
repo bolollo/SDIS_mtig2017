@@ -7,13 +7,12 @@ Conceptos básicos Servidor de Mapas
 	=================  ====================================================
 	Fecha              Autores
 	=================  ====================================================
-	14 Febrero 2017   * Wladimir Szczerban
+	14 Febrero 2017    * Wladimir Szczerban
 	=================  ====================================================
 
 	©2017 Wladimir Szczerban
 
-	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia :
-  Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
+	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
 Servidor de Mapas (WMS)
 ========================
@@ -81,7 +80,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   **Ejemplo**
 
-  http://galileo.icc.cat/arcgis/services/icc_limadmin_v_r/MapServer/WMSServer?REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=5&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=257904,4484796,680304,4907196&WIDTH=768&HEIGHT=768
+  http://galileo.icc.cat/arcgis/services/icc_limadmin_v_r/MapServer/WMSServer?REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=5&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
 
 3. **GetFeatureInfo**: esta petición sirve para mostrar los atributos de los objetos del mapa, vuelve la información en formato de tabla o XML. Si una capa está marcada como "consultable" *(queryable)*, se puede solicitar datos sobre una coordenada de la imagen del mapa.
 
@@ -160,3 +159,23 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
   **Ejemplo**
 
   http://wms.guifi.net/cgi-bin/mapserv?map=/home/guifi/maps.guifi.net/guifimaps/GMap.map&version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Nodes&format=image/png&STYLE=default
+
+
+Software de servidores de mapas
+###############################
+
+Existen múltiples programas que funcionana como servidores de mapa WMS, entre los principales está:
+
+*Software libre*
+
+* GeoServer
+
+* MapServer
+
+*Software propietario*
+
+* ArcGIS Server
+
+* GeoMedia
+
+El listado completo de servidores de mapas que cumplen con el estándar WMS de la OGC se puede ver en: http://www.opengeospatial.org/resource/products/compliant
