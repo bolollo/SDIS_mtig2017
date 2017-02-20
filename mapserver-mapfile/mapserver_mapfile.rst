@@ -1,6 +1,6 @@
-**************************************************
+*******************
 MapServer - Mapfile
-**************************************************
+*******************
 
 .. note::
 
@@ -15,7 +15,7 @@ MapServer - Mapfile
 	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
 MapServer - Mapfile
-==================================================
+===================
 
 El *Mapfile* (.map) es el corazón de MapServer, este archivo define las relaciones entre los objetos, la localización de los datos y define cómo debe ser dibujada la cartografía. Para entender el funcionamiento de MapServer hay que tener claro que una capa (LAYER) es la combinación de datos más estilos. A los datos se les da estilos usando directivas CLASS y STYLE, tanto en la forma de atributo como la geometría.
 
@@ -27,7 +27,7 @@ A la hora de crear el archivo map se han de tener en cuenta los siguientes aspec
 
 * Las cadenas que contienen caracteres no alfanuméricos o una palabra clave de MapServer deben ir entre comillas. Se recomienda poner TODAS las cadenas en comillas dobles.
 
-* El Mapfiles se espera que este codificado en UTF-8. Los archivos no UTF-8 tendrán que ser convertidos a UTF-8.
+* El Mapfile se espera que este codificado en UTF-8. Los archivos no UTF-8 tendrán que ser convertidos a UTF-8.
 
 * Los comentarios deben ir precedidos por el carácter #.
 
@@ -40,6 +40,8 @@ A la hora de crear el archivo map se han de tener en cuenta los siguientes aspec
 * MapServer acepta colores en valores RGB o como una cadena hexadecimal.
 
 * Los atributos se nombran utilizando la siguiente sintaxis: [NOMREATRIBUTO]. Tenga en cuenta que el nombre del atributo incluido entre los corchetes ES SENSIBLE A MAYÚSCULAS. Por lo general, los conjuntos de datos de forma generados por ESRI tienen sus atributos (nombres de columnas .dbf) todos en mayúsculas, por ejemplo, y para PostGIS, SIEMPRE utilice minúsculas.
+
+* Se recomienda que el archivo Mapfile no esté en ruta accesible desde internet
 
 Principales objetos del archivo .map
 ####################################
@@ -118,3 +120,5 @@ Principales objetos del archivo .map
       **OUTLINECOLOR:** Color usado para dibujar el contorno.
 
       **SYMBOL:** Simbolo usado para representar las geometrías
+
+Estos son algunos de los objetos que se pueden definir en el archivo .map, para ver todos sus objetos: http://www.mapserver.org/mapfile/index.html
