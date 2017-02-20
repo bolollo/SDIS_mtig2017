@@ -17,7 +17,7 @@ MapServer
 MapServer
 ========================
 
-Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fué desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como **Minnesota MapServer** para diferenciarlo del producto comercial "map server" de Autodesk. Implementa las especificaciones Web Map Service (WMS) **(cliente/servidor)**, Web Feature Service no-transaccional (WFS) **(cliente/servidor)**, Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).
+Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fué desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como *Minnesota MapServer* para diferenciarlo del producto comercial "map server" de Autodesk. Implementa las especificaciones Web Map Service (WMS) *(cliente/servidor)*, Web Feature Service no-transaccional (WFS) *(cliente/servidor)*, Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).
 
 http://www.mapserver.org/
 
@@ -32,7 +32,7 @@ Principales caraterísticas
 
 * Configuración "al vuelo" vía parámetros GET pasados por URL.
 
-* Configuración basada en el fichero mapfile **.map**.
+* Configuración basada en el fichero mapfile *.map*.
 
 * Incluye la posibilidad de usar una plantilla HTML MapServer para genererar una página web.
 
