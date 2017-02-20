@@ -131,7 +131,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
       http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map
 
-  Debemos ver que nos retorna el siguente mensaje:
+      Debemos ver que nos retorna el siguente mensaje:
 
     .. code-block::
 
@@ -139,42 +139,56 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Definir la capa del mapa.
 
-  #. Crear la carperta *datos* dentro del directorio del proyecto
+    #. Crear la carperta *datos* dentro del directorio del proyecto
 
-  #. Descargar el archivo :download:`pein_etrs89 <pein_etrs89.zip>`
+    #. Descargar el archivo :download:`pein_etrs89 <pein_etrs89.zip>`
 
-  #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
+    #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
 
-  #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente.
+    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente.
+
+      .. code-block::
+
+        #Definición de la capa pein
+        LAYER
+          NAME pein
+          TYPE POLYGON
+          STATUS ON
+          DATA "pein_etrs89"
+          TEMPLATE "info.html"
+          CLASSITEM 'AMBIT'
+          CLASS
+        	NAME 'pein'
+            STYLE
+        	  OUTLINECOLOR 10 10 10
+        	  COLOR 0 255 0
+        	  WIDTH 1
+        	END
+          END
+          PROJECTION
+        	"init=epsg:25831"
+          END
+          #Permite exportar GML
+          DUMP TRUE
+          #Descripció de la capa
+          METADATA
+        	  OWS_TITLE "Plan Espacios de Interés Natural"
+            OWS_ABSTRACT "metadatos"
+            OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
+        	  GML_INCLUDE_ITEMS "all"
+          END
+        END
+
+#. Verificar que funcione el getCapabilities. Abrir el navegador y escribir:
 
     .. code-block::
 
-      #Definición de la capa pein
-      LAYER
-        NAME pein
-        TYPE POLYGON
-        STATUS ON
-        DATA "pein_etrs89"
-        TEMPLATE "info.html"
-        CLASSITEM 'AMBIT'
-        CLASS
-      	NAME 'pein'
-          STYLE
-      	  OUTLINECOLOR 10 10 10
-      	  COLOR 0 255 0
-      	  WIDTH 1
-      	END
-        END
-        PROJECTION
-      	"init=epsg:25831"
-        END
-        #Permite exportar GML
-        DUMP TRUE
-        #Descripció de la capa
-        METADATA
-      	  OWS_TITLE "Plan Espacios de Interés Natural"
-          OWS_ABSTRACT "metadatos"
-          OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
-      	  GML_INCLUDE_ITEMS "all"
-        END
-      END
+      http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&request=getCapabilities&service=wms
+
+    Debemos ver el archivo xml con la descripción de las capacidades del servidor.
+
+#. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir:
+
+    .. code-block::
+
+      http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
