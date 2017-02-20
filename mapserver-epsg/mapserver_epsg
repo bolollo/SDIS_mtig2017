@@ -1,0 +1,30 @@
+****************
+MapServer - EPSG
+****************
+
+.. note::
+
+	=================  ====================================================
+	Fecha              Autores
+	=================  ====================================================
+	14 Febrero 2017    * Wladimir Szczerban
+	=================  ====================================================
+
+	©2017 Wladimir Szczerban
+
+	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
+
+MapServer - EPSG
+================
+
+MapServer se basa en la biblioteca PROJ.4 para las proyecciones. Por lo tanto, los objetos de proyección consisten en una serie de palabras clave de PROJ.4, que se especifican en el objeto directamente o se refieren a un archivo EPSG. Un archivo EPSG es un archivo de búsqueda que contiene parámetros de proyección y forma parte de la biblioteca PROJ.4.
+
+Al realizar la instalación del MapServer se crea una carpeta llamada proj dentro del directorio de instalación *(C:/ms4w/proj)*. Dentro de esta carpeta hay diversos archivos que se usan para realizar las transformaciones de coordenadas.
+
+El archivo EPSG se encuentra en la carpeta /proj/nad *(C:/ms4w/proj/nad)*. El archivo EPSG contiene un listado muy extenso de definiciones de proyecciones y cada vez que se quiere realizar una reproyección el MapServer tiene que recorrer todo el archivo EPSG hasta encontrar la proyección deseada.
+
+Una forma de mejorar el rendimiento del MapServer es colocar las proyecciones que utilizaremos en nuestro mapa en la parte superior del archivo EPSG ó también se podrían eliminar todas las proyecciones no usadas y únicamente dejar en el archivo EPSG las proyecciones que utilizaremos en nuestro mapa.
+
+.. warning:: antes de realizar cualquier modificación en el archivo EPSG es mejor realizar una copia y guardar un respaldo.
+
+MapServer también permite configurar transformaciones personalizadas entre diferentes sistemas de referencia. Un ejemplo de esto lo pueden encontrar en http://www.icc.cat/Home-ICC/Geodesia/Recursos donde se explica como implementar la transformación de ED50 a ETRS89.
