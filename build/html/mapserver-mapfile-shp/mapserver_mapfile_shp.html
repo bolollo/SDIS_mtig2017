@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MapServer - Mapfile carga de shapefile &mdash; geotalleres-teoria 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/geotalleres.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
+    <link rel="next" title="Cliente Web" href="../cliente-web/cliente_web.html" />
+    <link rel="prev" title="MapServer - Mapfile" href="../mapserver-mapfile/mapserver_mapfile.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GeoTalleres</a>
+        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Nav <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html#servidor-de-mapas-wms">Servidor de Mapas (WMS)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geoserver/geoserver.html">GeoServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geoserver/geoserver.html#id1">GeoServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver/mapserver.html">MapServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver/mapserver.html#id1">MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-install/mapserver_install.html">Instalación de MapServer (vía MS4W)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-install/mapserver_install.html#instalacion-mapserver">Instalación MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html">MapServer - Mapfile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html#id1">MapServer - Mapfile</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">MapServer - Mapfile carga de shapefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">MapServer - Mapfile carga de shapefile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#referencias">Referencias</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">MapServer - Mapfile carga de shapefile</a><ul>
+<li><a class="reference internal" href="#id1">MapServer - Mapfile carga de shapefile</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../mapserver-mapfile/mapserver_mapfile.html" title="Previous Chapter: MapServer - Mapfile"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; MapServer - M...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../cliente-web/cliente_web.html" title="Next Chapter: Cliente Web"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Cliente Web &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/mapserver-mapfile-shp/mapserver_mapfile_shp.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="mapserver-mapfile-carga-de-shapefile">
+<h1>MapServer - Mapfile carga de shapefile<a class="headerlink" href="#mapserver-mapfile-carga-de-shapefile" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fecha</th>
+<th class="head">Autores</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>14 Febrero 2017</td>
+<td><ul class="first last simple">
+<li>Wladimir Szczerban</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>©2017 Wladimir Szczerban</p>
+<p class="last">Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">http://creativecommons.org/licenses/by-sa/3.0/deed.es</a>)</p>
+</div>
+<div class="section" id="id1">
+<h2>MapServer - Mapfile carga de shapefile<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI shapefile (.shp).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Los todos los datos utilizados en este ejemplo son datos de ejemplo y no tienen ningún carácter oficial. Igualmente los datos pueden proceder de fuentes diferentes a las indicadas en la configuración del servicio y ser datos no reales.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Crear la carpeta del proyecto <em>(mtig2017)</em> donde crearemos y copiaremos todos los archivos. Es recomendable que la carpeta no esté en una ruta accesible desde Internet para evitar que los usuarios accedan directamente a nuestros datos.</p>
+<div class="highlight-python"><div class="highlight"><pre>Por ejemplo: crear la carpeta en C:\Users\XXXX\mtig2017
+</pre></div>
+</div>
+</li>
+<li><p class="first">Crear el archivo <em>pein.map</em> dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).</p>
+</li>
+<li><p class="first">Crear el objeto MAP.</p>
+<div class="highlight-python"><div class="highlight"><pre># Inicio arxivo MAP
+MAP
+
+#Nombre de la aplicación no debe contener espacios ni carácteres especiales
+NAME plan_pein
+
+#Estado
+STATUS ON
+
+#Extensión mapa [minx] [miny] [maxx] [maxy]
+EXTENT 263747.60 4484436.53  527495.20 4748184.13
+
+#Unidades del mapa
+UNITS METERS
+
+#Tamaño máximo de la imagen
+MAXSIZE 4096
+
+#Ruta de la cartografia
+SHAPEPATH &quot;datos&quot;
+
+#Color de fondo
+IMAGECOLOR 255 255 255
+
+#Formato de salida de la imagen
+OUTPUTFORMAT
+  NAME &quot;png8&quot;
+  DRIVER AGG/PNG8
+  MIMETYPE &quot;image/png&quot;
+  IMAGEMODE RGBA
+  EXTENSION &quot;png&quot;
+  FORMATOPTION &quot;QUANTIZE_FORCE=on&quot;
+  FORMATOPTION &quot;QUANTIZE_COLORS=256&quot;
+  FORMATOPTION &quot;GAMMA=0.75&quot;
+END
+
+#Ruta librería proyecciones
+CONFIG &quot;PROJ_LIB&quot; &#39;C:/ms4w/proj/nad/&#39;
+
+#Proyección por defecto del mapa
+PROJECTION
+&quot;init=epsg:25831&quot;
+END
+
+#Definició de las capacidades
+WEB
+ IMAGEPATH &quot;tmp/&quot;
+ IMAGEURL &quot;tmp/&quot;
+ METADATA
+    OWS_TITLE &quot;Aplicación OGC&quot;
+    OWS_ABSTRACT &quot;Ejemplo de interoperabilidad utilitzando Minnesota MapServer&quot;
+    OWS_ENABLE_REQUEST &quot;*&quot;
+    OWS_ONLINERESOURCE &quot;http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&quot;
+    OWS_SRS &quot;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&quot;
+    OWS_EXTENT &quot;263747.60 4484436.53 527495.20 4748184.13&quot;
+    WMS_FEATURE_INFO_MIME_TYPE &quot;text/html&quot;
+    OWS_ACCESSCONSTRAINTS &quot;NINGUNO&quot;
+    OWS_LIMITSCONSTRAINTS &quot;NINGUNO&quot;
+    OWS_FEES &quot;NINGUNO&quot;
+    OWS_ADDRESSTYPE &quot;MAILING ADDRESS&quot;
+    OWS_CITY &quot;Barcelona&quot;
+    OWS_STATEORPROVINCE &quot;Barcelona&quot;
+    OWS_CONTACTELECTRONICMAILADDRESS &quot;test@icgc.cat&quot;
+    OWS_CONTACTPERSON &quot;&quot;
+    OWS_CONTACTORGANIZATION &quot;Institut Cartogràfic i Geològic de Catalunya&quot;
+    OWS_ADDRESS &quot;Parc de Montjuic sn&quot;
+    OWS_POSTCODE &quot;08038&quot;
+    OWS_COUNTRY &quot;Spain&quot;
+    OWS_CONTACTPOSITION &quot;Geostarters&quot;
+    OWS_CONTACTVOICETELEPHONE &quot;&quot;
+    OWS_SERVICE_ONLINERESOURCE &quot;http://catalegidec.icc.cat&quot;
+    OWS_ROLE &quot;Provaider&quot;
+    OWS_KEYWORDLIST &quot;Cataluña,servicio,mapa,pein&quot;
+    OWS_CONTACTFACSIMILETELEPHONE &quot;&quot;
+    OWS_HOURSOFSERVICE &quot;&quot;
+    OWS_CONTACTINSTRUCTIONS &quot;&quot;
+    OWS_ATTRIBUTION_ONLINERESOURCE &quot;http://www.icgc.cat&quot;
+    OWS_ATTRIBUTION_TITLE &quot;ICGC&quot;
+    OWS_BBOX_EXTENDED &quot;True&quot;
+    OWS_HTTP_MAX_AGE &quot;3600&quot;
+    LABELCACHE_MAP_EDGE_BUFFER &quot;10&quot;
+    OWS_SLD_ENABLED &quot;true&quot;
+  END
+END
+
+#definicion de la leyenda del mapa
+
+#definicion de las capas del mapa
+
+#Final arxiu MAP
+END
+</pre></div>
+</div>
+</li>
+<li><p class="first">Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map
+</pre></div>
+</div>
+</li>
+<li><p class="first">Comprobar que retorna el siguente mensaje:</p>
+<div class="highlight-python"><div class="highlight"><pre>mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
+</pre></div>
+</div>
+</li>
+<li><p class="first">Definir la capa del mapa.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Crear la carperta <em>datos</em> dentro del directorio del proyecto</p>
+</li>
+<li><p class="first">Descargar el archivo <a class="reference download internal" href="../_downloads/pein_etrs89.zip" download=""><code class="xref download docutils literal"><span class="pre">pein_etrs89</span></code></a></p>
+</li>
+<li><p class="first">Descomprimir el archivo pein_etrs89.zip dentro de la carpeta <em>datos</em></p>
+</li>
+<li><p class="first">Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente.</p>
+<div class="highlight-python"><div class="highlight"><pre>#Definición de la capa pein
+LAYER
+  NAME pein
+  TYPE POLYGON
+  STATUS ON
+  DATA &quot;pein_etrs89&quot;
+  TEMPLATE &quot;info.html&quot;
+  CLASSITEM &#39;AMBIT&#39;
+  CLASS
+        NAME &#39;pein&#39;
+    STYLE
+          OUTLINECOLOR 10 10 10
+          COLOR 0 255 0
+          WIDTH 1
+        END
+  END
+  PROJECTION
+        &quot;init=epsg:25831&quot;
+  END
+  #Permite exportar GML
+  DUMP TRUE
+  #Descripció de la capa
+  METADATA
+          OWS_TITLE &quot;Plan Espacios de Interés Natural&quot;
+    OWS_ABSTRACT &quot;metadatos&quot;
+    OWS_SRS &quot;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&quot;
+          GML_INCLUDE_ITEMS &quot;all&quot;
+  END
+END
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">Verificar que funcione el getCapabilities. Abrir el navegador y escribir:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&amp;request=getCapabilities&amp;service=wms
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Debemos ver el archivo xml con la descripción de las capacidades del servidor.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=pein&amp;FORMAT=image/png&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=263747.60,4484436.53,527495.20,4748184.13&amp;WIDTH=768&amp;HEIGHT=768
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Varios.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
