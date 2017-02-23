@@ -1,6 +1,6 @@
-**************************************
-MapServer - Mapfile carga de shapefile
-**************************************
+***********************************
+MapServer - Mapfile carga de raster
+***********************************
 
 .. note::
 
@@ -14,10 +14,10 @@ MapServer - Mapfile carga de shapefile
 
 	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
-MapServer - Mapfile carga de shapefile
-======================================
+MapServer - Mapfile carga de raster
+===================================
 
-Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI shapefile (.shp).
+Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoTIFF (.tif).
 
 .. warning:: Los todos los datos utilizados en este ejemplo son datos de ejemplo y no tienen ningún carácter oficial. Igualmente los datos pueden proceder de fuentes diferentes a las indicadas en la configuración del servicio y ser datos no reales.
 
@@ -25,7 +25,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
     Por ejemplo: crear la carpeta en C:\Users\XXXX\mtig2017
 
-#. Crear el archivo *pein.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
+#. Crear el archivo *ortos.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
 
 #. Crear el objeto MAP. ::
 
@@ -33,7 +33,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     MAP
 
     #Nombre de la aplicación no debe contener espacios ni carácteres especiales
-    NAME plan_pein
+    NAME ortofotos
 
     #Estado
     STATUS ON
@@ -123,7 +123,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map
 
 #. Comprobar que retorna el siguente mensaje: ::
 
@@ -133,47 +133,47 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
     #. Crear la carperta *datos* dentro del directorio del proyecto
 
-    #. Descargar el archivo :download:`pein_etrs89.zip <pein_etrs89.zip>`
+    #. Descargar el archivo :download:`ortos.zip <ortos.zip>`
 
     #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
 
     #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente. ::
 
-        #Definición de la capa pein
-        LAYER
-          NAME pein
-          TYPE POLYGON
-          STATUS ON
-          DATA "pein_etrs89"
-          TEMPLATE "info.html"
-          CLASSITEM 'AMBIT'
-          CLASS
-        	NAME 'pein'
-            STYLE
-        	  OUTLINECOLOR 10 10 10
-        	  COLOR 0 255 0
-        	  WIDTH 1
-        	END
-          END
-          PROJECTION
-        	"init=epsg:25831"
-          END
-          #Permite exportar GML
-          DUMP TRUE
-          #Descripció de la capa
-          METADATA
-        	  OWS_TITLE "Plan Espacios de Interés Natural"
-            OWS_ABSTRACT "metadatos"
-            OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
-        	  GML_INCLUDE_ITEMS "all"
-          END
+      #Definición de la capa pein
+      LAYER
+        NAME pein
+        TYPE POLYGON
+        STATUS ON
+        DATA "pein_etrs89"
+        TEMPLATE "info.html"
+        CLASSITEM 'AMBIT'
+        CLASS
+        NAME 'pein'
+          STYLE
+          OUTLINECOLOR 10 10 10
+          COLOR 0 255 0
+          WIDTH 1
         END
+        END
+        PROJECTION
+        "init=epsg:25831"
+        END
+        #Permite exportar GML
+        DUMP TRUE
+        #Descripció de la capa
+        METADATA
+          OWS_TITLE "Plan Espacios de Interés Natural"
+          OWS_ABSTRACT "metadatos"
+          OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
+          GML_INCLUDE_ITEMS "all"
+        END
+      END
 
 #. Verificar que funcione el getCapabilities. Abrir el navegador y escribir:
 
 	::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&request=getCapabilities&service=wms
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map&request=getCapabilities&service=wms
 
 	.. note::
 
@@ -181,13 +181,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
-  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
+  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: mapaPein.png
+.. |logo| image:: mapaOrto.png
   :align: middle
-  :alt: mapa pein
+  :alt: mapaOrto
 
 +--------+
 | |logo| |
