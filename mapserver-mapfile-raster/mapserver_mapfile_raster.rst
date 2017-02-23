@@ -25,7 +25,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
     Por ejemplo: crear la carpeta en C:\Users\XXXX\mtig2017
 
-#. Crear el archivo *ortos.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
+#. Crear el archivo *orto.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
 
 #. Crear el objeto MAP. ::
 
@@ -33,7 +33,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
     MAP
 
     #Nombre de la aplicación no debe contener espacios ni carácteres especiales
-    NAME ortofotos
+    NAME ortofoto
 
     #Estado
     STATUS ON
@@ -81,7 +81,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
         OWS_TITLE "Aplicación OGC"
         OWS_ABSTRACT "Ejemplo de interoperabilidad utilitzando Minnesota MapServer"
         OWS_ENABLE_REQUEST "*"
-        OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map"
+        OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map"
         OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
         OWS_EXTENT "263747.60 4484436.53 527495.20 4748184.13"
         WMS_FEATURE_INFO_MIME_TYPE "text/html"
@@ -101,7 +101,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
         OWS_CONTACTVOICETELEPHONE ""
         OWS_SERVICE_ONLINERESOURCE "http://catalegidec.icc.cat"
         OWS_ROLE "Provaider"
-        OWS_KEYWORDLIST "Cataluña,servicio,mapa,pein"
+        OWS_KEYWORDLIST "Cataluña,servicio,mapa,orto"
         OWS_CONTACTFACSIMILETELEPHONE ""
         OWS_HOURSOFSERVICE ""
         OWS_CONTACTINSTRUCTIONS ""
@@ -123,7 +123,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map
 
 #. Comprobar que retorna el siguente mensaje: ::
 
@@ -133,39 +133,25 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
     #. Crear la carperta *datos* dentro del directorio del proyecto
 
-    #. Descargar el archivo :download:`ortos.zip <ortos.zip>`
-
-    #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
+    #. Copiar el archivo GeoTIFF (of25cv33sd0f287119s1r080.tif) en el directorio de datos
 
     #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente. ::
 
-      #Definición de la capa pein
+      #Definición de la capa ortos
       LAYER
-        NAME pein
-        TYPE POLYGON
+        NAME orto
+        TYPE RASTER
         STATUS ON
-        DATA "pein_etrs89"
-        TEMPLATE "info.html"
-        CLASSITEM 'AMBIT'
-        CLASS
-        NAME 'pein'
-          STYLE
-          OUTLINECOLOR 10 10 10
-          COLOR 0 255 0
-          WIDTH 1
-        END
-        END
+        DATA "of25cv33sd0f287119s1r080.tif"
         PROJECTION
         "init=epsg:25831"
         END
-        #Permite exportar GML
-        DUMP TRUE
         #Descripció de la capa
         METADATA
-          OWS_TITLE "Plan Espacios de Interés Natural"
+          OWS_TITLE "ortofotos"
           OWS_ABSTRACT "metadatos"
           OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
-          GML_INCLUDE_ITEMS "all"
+          OWS_EXTENT "263747.60 4484436.53  527495.20 4748184.13"
         END
       END
 
@@ -173,7 +159,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
 	::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map&request=getCapabilities&service=wms
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map&request=getCapabilities&service=wms
 
 	.. note::
 
@@ -181,7 +167,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
 #. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
-  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/ortos.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
+  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/Gaby/mtig2017/orto.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa
 
