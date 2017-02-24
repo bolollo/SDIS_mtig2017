@@ -135,7 +135,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
     #. Copiar el archivo GeoTIFF (of25cv33sd0f287119s1r080.tif) en el directorio de datos
 
-    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente. ::
+    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
 
       #Definición de la capa ortos
       LAYER
@@ -167,7 +167,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
 #. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
-  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/Gaby/mtig2017/orto.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&WIDTH=768&HEIGHT=768
+  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa
 

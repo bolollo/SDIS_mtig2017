@@ -1,6 +1,6 @@
-********************************************************
-MapServer - Mapfile carga de shapefile con clasificación
-********************************************************
+*******************************************************
+MapServer - Mapfile carga de mosaico de imágenes raster
+*******************************************************
 
 .. note::
 
@@ -14,10 +14,10 @@ MapServer - Mapfile carga de shapefile con clasificación
 
 	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
-MapServer - Mapfile carga de shapefile con clasificación
-========================================================
+MapServer - Mapfile carga de mosaico de imágenes raster
+=======================================================
 
-Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI shapefile (.shp).
+Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes en formato GeoTIFF (.tif).
 
 .. warning:: Los todos los datos utilizados en este ejemplo son datos de ejemplo y no tienen ningún carácter oficial. Igualmente los datos pueden proceder de fuentes diferentes a las indicadas en la configuración del servicio y ser datos no reales.
 
@@ -25,7 +25,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
     Por ejemplo: crear la carpeta en C:\Users\XXXX\mtig2017
 
-#. Crear el archivo *equipamientos.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
+#. Crear el archivo *mosaico.map* dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).
 
 #. Crear el objeto MAP. ::
 
@@ -33,7 +33,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     MAP
 
     #Nombre de la aplicación no debe contener espacios ni carácteres especiales
-    NAME equipamientos
+    NAME mosaico
 
     #Estado
     STATUS ON
@@ -81,7 +81,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
         OWS_TITLE "Aplicación OGC"
         OWS_ABSTRACT "Ejemplo de interoperabilidad utilitzando Minnesota MapServer"
         OWS_ENABLE_REQUEST "*"
-        OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map"
+        OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map"
         OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
         OWS_EXTENT "263747.60 4484436.53 527495.20 4748184.13"
         WMS_FEATURE_INFO_MIME_TYPE "text/html"
@@ -101,7 +101,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
         OWS_CONTACTVOICETELEPHONE ""
         OWS_SERVICE_ONLINERESOURCE "http://catalegidec.icc.cat"
         OWS_ROLE "Provaider"
-        OWS_KEYWORDLIST "Cataluña,servicio,mapa,equipamientos"
+        OWS_KEYWORDLIST "Cataluña,servicio,mapa,orto"
         OWS_CONTACTFACSIMILETELEPHONE ""
         OWS_HOURSOFSERVICE ""
         OWS_CONTACTINSTRUCTIONS ""
@@ -123,84 +123,46 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map
 
 #. Comprobar que retorna el siguente mensaje: ::
 
 		mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 
-#. Definir la capa del mapa.
+#. Crear la carperta *datos* dentro del directorio del proyecto
 
-    #. Crear la carperta *datos* dentro del directorio del proyecto
+#. Copiar los archivos GeoTIFF dentro de la carpeta *datos*
 
-    #. Descargar el archivo :download:`equipamientos.zip <equipamientos.zip>`
+#. Generar el shapefile que contiene el indice de las imágenes raster.::
 
-    #. Descomprimir el archivo equipamientos.zip dentro de la carpeta *datos*
+    gdaltindex mosaico.shp *.tif
 
-    #. Crear la carperta *images* dentro del directorio del proyecto
+#. Generar el índice espacial basado en quadtree para un conjunto de datos shapefile.::
 
-    #. Descargar el archivo :download:`images.zip <images.zip>`
+    shptree mosaico.shp
 
-    #. Descomprimir el archivo images.zip dentro de la carpeta *images*
+#. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
 
-    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
-
-        LAYER
-	      NAME "administracio_publica"
-		  STATUS ON
-	      TYPE POINT
-	      GROUP "equipaments"
-	      DATA "eq_gencat_v1shp"
-		  TRANSPARENCY 100
-	      CLASSITEM "TIPUS"
-		  LABELMINSCALE 150
-	      LABELMAXSCALE 90000
-	      TOLERANCE 3
-	      DUMP TRUE
-	      PROJECTION
-	         "init=epsg:25831"
-	      END
-		  CLASS
-			NAME "Administracio Publica"
-			TEMPLATE 'info_new.htm'
-			TEXT "[NOM]"
-			STYLE
-		      COLOR 200 140 10
-			  SYMBOL "images/administracio_publica.gif"
-		      SIZE 16
-			END
-			LABEL
-			  ANTIALIAS TRUE
-			  FONT arial-bold
-			  TYPE TRUETYPE
-			  MINFEATURESIZE 16
-			  MINDISTANCE 15
-			  POSITION CC
-			  OFFSET 0 15
-			  BUFFER 2
-			  SIZE 8
-			  COLOR 173 33 16
-			  SHADOWCOLOR 218 218 218
-			  SHADOWSIZE 2 2
-			  OUTLINECOLOR 254 254 254
-			END
-		  END
-		  METADATA
-		    "OWS_title" "Administracio Publica"
-		    "ows_group_title" "Equipaments"
-			"ows_featureid" "ID"
-		    "OWS_abstract" "Equipaments Gencat"
-		    "OWS_extent" "256900.000 4484809.998  533550.000 4751559.998"
-		    "gml_include_items" "all"
-		    "OWS_SRS" "EPSG:25831 EPSG:4326 EPSG:23031 EPSG:32631 EPSG:4258 EPSG:4230 EPSG:3857"
-		  END
-	    END # Layer
+    #GeoTifF con cabecera y world file
+    LAYER
+      NAME "ortos"
+      STATUS ON
+      TYPE RASTER
+      TILEINDEX "mosaico.shp"
+      TILEITEM "location"
+      METADATA
+          OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
+          OWS_NAME "ortos"
+          OWS_EXTENT "263747.60 4484436.53 527495.20 4748184.13"
+          OWS_TITLE "mosaico ortos"
+      END
+    END
 
 #. Verificar que funcione el getCapabilities. Abrir el navegador y escribir:
 
 	::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&request=getCapabilities&service=wms
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map&request=getCapabilities&service=wms
 
 	.. note::
 
@@ -208,40 +170,31 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
-  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
+  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&WIDTH=768&HEIGHT=768
 
-#. Debemos ver como respuesta nuestro mapa con todos los equipamientos sin clasificación
+#. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: mapaEquipamientosTodos.png
+.. |logo| image:: mapaMosaico.png
   :align: middle
-  :alt: mapa todos equipamientos
+  :alt: mapa mosaico
 
 +--------+
 | |logo| |
 +--------+
 
-#. Para clasificar los puntos del mapa debemos crear un *EXPRESSION* dentro de nuestro CLASS. Justo debajo del nombre del CLASS agregamos lo siguiente::
+#. Para mejorar el rendimiento del WMS debemos generar los *overview* de las imágenes. Esto sirve para generar imágenes de vista general de menor resolución.::
 
-   	EXPRESSION ("[TIPUS]" == "Agricultura_Ramaderia_Pesca")
+    gdaladdo -r average NOMBRE_DE_LA_IMAGEM.tif NIVELES
 
-#. Cambiaremos el icono por la imagen correspondiente con agricultura. En lugar de SYMBOL "images/administracio_publica.gif" pondremos SYMBOL "images/agricultura.gif"
+    Ejemplo:
+    gdaladdo -r average of25cv33sd0f287119s1r080.tif 2 4 8 16 32 64
 
-#. Si recargamos el mapa en el navegador ahora veremos muchos menos puntos y ha cambiado la simbolización.
+#. Ahora podemos volver a visualizar el mapa recargardo la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.
 
-.. |logo_agric| image:: mapaAgricultura.png
+.. |logoOverview| image:: mapaMosaicoOverview.png
   :align: middle
-  :alt: mapa equipamientos agricultura
+  :alt: mapa mosaico con overview
 
-+--------------+
-| |logo_agric| |
-+--------------+
-
-
-Ejercicio
-#########
-
-#. Cambiar el nombre de la capa de administracio_publica a agricultura
-#. Modificar la petición getMap con el nuevo nombre de capa
-#. Agregar una nueva capa con otra categoría
-#. Modificar la petición getMap para mostrar las dos capas
-#. Crear un nuevo template para la respuesta de las peticiones getFeatureInfo
++--------+
+| |logoOverview| |
++--------+

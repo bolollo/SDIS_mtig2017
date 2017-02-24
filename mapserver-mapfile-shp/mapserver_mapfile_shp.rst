@@ -137,7 +137,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
     #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
 
-    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice #definicion de las capas del mapa agregamos lo siguiente. ::
+    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
 
         #Definición de la capa pein
         LAYER
