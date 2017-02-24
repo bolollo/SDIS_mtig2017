@@ -193,7 +193,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 | |logo| |
 +--------+
 
-#. En la carpeta del proyecto creamos el archivo info.html que es el encargado de mostrar la información de los elementos seleccionados al hacer una petición getFeatureInfo.::
+#. En la carpeta del proyecto creamos el archivo *info.html* que es el encargado de mostrar la información de los elementos seleccionados al hacer una petición getFeatureInfo.::
 
 		<!-- MapServer Template -->
 		<html>
