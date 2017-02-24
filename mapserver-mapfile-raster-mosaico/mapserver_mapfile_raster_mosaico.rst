@@ -195,6 +195,6 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
   :align: middle
   :alt: mapa mosaico con overview
 
-+--------+
++----------------+
 | |logoOverview| |
-+--------+
++----------------+
