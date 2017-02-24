@@ -192,3 +192,36 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 +--------+
 | |logo| |
 +--------+
+
+#. En la carpeta del proyecto creamos el archivo info.html que es el encargado de mostrar la información de los elementos seleccionados al hacer una petición getFeatureInfo.::
+
+		<!-- MapServer Template -->
+		<html>
+		<head>
+		<title>Equipaments Gencat</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		</head>
+		<body>
+		<h3>[cl]</h3>
+		<table cellspacing="0" cellpadding="0">
+		<tbody>
+		<tr>
+		<th>Nombre</th><td>[NOM]</td>
+		</tr>
+		<tr>
+		<th>Código</th><td>[CODI]</td>
+		</tr>
+		<tr>
+		<th>Delimitación</th><td>[DELIMITACI]</td>
+		</tr>
+		<tr>
+		<th>Ámbito</th><td>[AMBIT]</td>
+		</tr>
+		</tbody>
+		</table>
+		</body>
+		</html>
+
+#. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta.::
+
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&QUERY_LAYERS=pein&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768&X=418&Y=509
