@@ -198,7 +198,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 		<!-- MapServer Template -->
 		<html>
 		<head>
-		<title>Equipaments Gencat</title>
+		<title>Pein</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		</head>
 		<body>
