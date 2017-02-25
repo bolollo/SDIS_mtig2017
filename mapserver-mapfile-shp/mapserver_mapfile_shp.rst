@@ -243,4 +243,5 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     END
 
 #. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta.::
-   http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetLegendGraphic&SLD_VERSION=1.1.0&LAYER=pein&FORMAT=image/png&STYLE=default 
+
+    http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetLegendGraphic&SLD_VERSION=1.1.0&LAYER=pein&FORMAT=image/png&STYLE=default 
