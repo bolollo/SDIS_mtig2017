@@ -1,6 +1,6 @@
-*********************************
-Leaflet - Visualizar una capa WMS
-*********************************
+**********************************
+Leaflet - Visualizar una capa WMTS
+**********************************
 
 .. note::
 
@@ -14,8 +14,8 @@ Leaflet - Visualizar una capa WMS
 
 	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
-Leaflet - Visualizar una capa WMS
-=================================
+Leaflet - Visualizar una capa WMTS
+==================================
 
 Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde visualizar servicios WMS.
 
@@ -47,10 +47,10 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
 			var map = L.map('mapid').setView([41.68, 	1.85], 9);		
 		</script>
 
-#. Agregar la capa WMS. Luego de la declaración del objeto mapa escribir: ::
+#. Agregar la capa WMTS. Luego de la declaración del objeto mapa escribir: ::
    
-		var wmsTopoIcgc = L.tileLayer.wms('http://geoserveis.icgc.cat/icc_mapesbase/wms/service?', {
-		  layers: 'mtc5m'
+		var wmtsOpenStreetMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 
 #. Abrir el navegador y ver que nuestro visor está funcionando correctamente. ::
@@ -61,6 +61,6 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
 Ejercicio:
 ==========
 
-#. Agregar la capa WMS de nuestro servicio WMS de Pein
+#. Agregar la capa WMTS de la ortofoto ó topográfico del servicio WMTS del ICGC (http://icgc.cat)
 
  

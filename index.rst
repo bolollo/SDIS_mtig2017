@@ -20,4 +20,5 @@ Materiales:
    cliente-mapas/cliente_mapas
    cliente-web/cliente_web
    leaflet-wms/leaflet_wms
+   leaflet-wmts/leaflet_wmts
    
