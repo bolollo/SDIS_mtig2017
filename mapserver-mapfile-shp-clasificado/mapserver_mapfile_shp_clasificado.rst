@@ -212,7 +212,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Debemos ver como respuesta nuestro mapa con todos los equipamientos sin clasificación
 
-.. |logo| image:: mapaEquipamientosTodos.png
+.. |logo| image:: _images/mapaEquipamientosTodos.png
   :align: middle
   :alt: mapa todos equipamientos
 
@@ -228,7 +228,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Si recargamos el mapa en el navegador ahora veremos muchos menos puntos y ha cambiado la simbolización.
 
-.. |logo_agric| image:: mapaAgricultura.png
+.. |logo_agric| image:: _images/mapaAgricultura.png
   :align: middle
   :alt: mapa equipamientos agricultura
 
