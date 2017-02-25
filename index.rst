@@ -1,5 +1,5 @@
 SDIS_mtig2017
-====================================
+=============
 
 Materiales:
 
@@ -21,4 +21,7 @@ Materiales:
    cliente-web/cliente_web
    leaflet-wms/leaflet_wms
    leaflet-wmts/leaflet_wmts
+   qgis-wms/qgis_wms
+   qgis-wmts/qgis_wmts
+   
    

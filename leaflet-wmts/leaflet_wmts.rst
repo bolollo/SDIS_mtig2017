@@ -44,7 +44,7 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
    
 		<script>
 			//Creamos el objeto mapa.
-			var map = L.map('mapid').setView([41.68, 	1.85], 9);		
+			var map = L.map('mapid').setView([41.68, 1.85], 9);		
 		</script>
 
 #. Agregar la capa WMTS. Luego de la declaración del objeto mapa escribir: ::

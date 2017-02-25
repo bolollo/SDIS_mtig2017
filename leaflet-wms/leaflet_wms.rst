@@ -44,7 +44,7 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
    
 		<script>
 			//Creamos el objeto mapa.
-			var map = L.map('mapid').setView([41.68, 	1.85], 9);		
+			var map = L.map('mapid').setView([41.68, 1.85], 9);		
 		</script>
 
 #. Agregar la capa WMS. Luego de la declaración del objeto mapa escribir: ::
@@ -61,6 +61,6 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
 Ejercicio:
 ==========
 
-#. Agregar la capa WMS de nuestro servicio WMS de Pein
+#. Agregar la capa pein de nuestro servicio WMS de Pein
 
- 
+
