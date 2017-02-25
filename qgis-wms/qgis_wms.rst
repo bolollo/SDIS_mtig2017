@@ -45,7 +45,7 @@ Utilizaremos el programa **QGIS** para visualizar servicios WMS.
 
 	En este caso utilizaremos la url del servidor WMS del ICGC. ::
 
-        http://geoserveis.icgc.cat/icc_mapesbase/wms/service?
+  		http://geoserveis.icgc.cat/icc_mapesbase/wms/service?
 
 #. En el diálogo de añadir capa presionar el botón de *conectar* para cargar el listado de capas del servicio.
 
