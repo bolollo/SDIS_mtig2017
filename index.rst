@@ -19,3 +19,5 @@ Materiales:
    mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico
    cliente-mapas/cliente_mapas
    cliente-web/cliente_web
+   leaflet-wms/leaflet_wms
+   

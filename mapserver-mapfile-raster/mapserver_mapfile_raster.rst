@@ -171,7 +171,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: mapaOrto.png
+.. |logo| image:: _images/mapaOrto.png
   :align: middle
   :alt: mapaOrto
 

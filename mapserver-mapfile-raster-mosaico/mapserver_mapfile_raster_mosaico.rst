@@ -174,7 +174,7 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: mapaMosaico.png
+.. |logo| image:: _images/mapaMosaico.png
   :align: middle
   :alt: mapa mosaico
 
@@ -191,7 +191,7 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
 
 #. Ahora podemos volver a visualizar el mapa recargardo la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.
 
-.. |logoOverview| image:: mapaMosaicoOverview.png
+.. |logoOverview| image:: _images/mapaMosaicoOverview.png
   :align: middle
   :alt: mapa mosaico con overview
 

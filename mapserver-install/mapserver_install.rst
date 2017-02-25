@@ -49,7 +49,7 @@ Al finalizar la instalación comprobamos que se ha realizado correctamente, para
 
 Si se ha instalado correctamente debemos ver en nuestro navegador la siguiente página
 
-.. |logo| image:: ms4w.png
+.. |logo| image:: _images/ms4w.png
   :align: middle
   :alt: página de inicio de MS4W
 

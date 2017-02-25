@@ -185,7 +185,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: mapaPein.png
+.. |logo| image:: _images/mapaPein.png
   :align: middle
   :alt: mapa pein
 
