@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>QGIS - Visualizar una capa WMS &mdash; geotalleres-teoria 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/geotalleres.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GeoTalleres</a>
+        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Nav <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html#servidor-de-mapas-wms">Servidor de Mapas (WMS)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geoserver/geoserver.html">GeoServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geoserver/geoserver.html#id1">GeoServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver/mapserver.html">MapServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver/mapserver.html#id1">MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-install/mapserver_install.html">Instalación de MapServer (vía MS4W)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-install/mapserver_install.html#instalacion-mapserver">Instalación MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html">MapServer - Mapfile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html#id1">MapServer - Mapfile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-shp/mapserver_mapfile_shp.html">MapServer - Mapfile carga de shapefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-shp/mapserver_mapfile_shp.html#id1">MapServer - Mapfile carga de shapefile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-shp-clasificado/mapserver_mapfile_shp_clasificado.html">MapServer - Mapfile carga de shapefile con clasificación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-shp-clasificado/mapserver_mapfile_shp_clasificado.html#id1">MapServer - Mapfile carga de shapefile con clasificación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html">MapServer - Mapfile carga de raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html#id1">MapServer - Mapfile carga de raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html">MapServer - Mapfile carga de mosaico de imágenes raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">QGIS - Visualizar una capa WMS</a><ul>
+<li><a class="reference internal" href="#id1">QGIS - Visualizar una capa WMS</a></li>
+<li><a class="reference internal" href="#ejercicio">Ejercicio:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/qgis-wms/qgis_wms.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="qgis-visualizar-una-capa-wms">
+<h1>QGIS - Visualizar una capa WMS<a class="headerlink" href="#qgis-visualizar-una-capa-wms" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fecha</th>
+<th class="head">Autores</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>14 Febrero 2017</td>
+<td><ul class="first last simple">
+<li>Wladimir Szczerban</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>©2017 Wladimir Szczerban</p>
+<p class="last">Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">http://creativecommons.org/licenses/by-sa/3.0/deed.es</a>)</p>
+</div>
+<div class="section" id="id1">
+<h2>QGIS - Visualizar una capa WMS<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Utilizaremos el programa <strong>QGIS</strong> para visualizar servicios WMS.</p>
+<ol class="arabic">
+<li><p class="first">Abrir el <em>QGIS desktop</em> y crear un nuevo proyecto llamado <em>mtig_sdi</em></p>
+</li>
+<li><p class="first">Presionar el botón de agregar WMS/WMTS del QGIS para desplegar el diálogo de añadir capa</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="añadir un wms" class="align-middle" src="../_images/addWms.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">En el diálogo de añadir capa presionar el botón de <em>nuevo</em> para desplegar el diálogo de crear una nueva conexión.</p>
+</li>
+<li><p class="first">En el diálogo de crear conexión debemos rellenar el campo nombre con el nombre que queremos dar a esta conexión y el campo URL con la dirección del servicio WMS. Una vez rellenados los campos presionar el botón de Aceptar.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="conexión wms icgc" class="align-middle" src="../_images/wms_icgc.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>En este caso utilizaremos la url del servidor WMS del ICGC.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://geoserveis.icgc.cat/icc_mapesbase/wms/service?
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">En el diálogo de añadir capa presionar el botón de <em>conectar</em> para cargar el listado de capas del servicio.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="listado capas icgc" class="align-middle" src="../_images/capas_wms_icgc.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Seleccionar la(s) capa(s) que queremos cargar en nuestro mapa y presionamos el botón de Añadir. Nos debe cargar el servicio WMS en nuestro mapa.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="ver wms" class="align-middle" src="../_images/visualizar_wms.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="ejercicio">
+<h2>Ejercicio:<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Agregar la capa pein de nuestro servicio WMS de Pein</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Varios.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
