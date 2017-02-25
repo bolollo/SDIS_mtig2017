@@ -225,3 +225,22 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 #. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta.::
 
 		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&QUERY_LAYERS=pein&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768&X=418&Y=509
+
+#. Crear la leyenda del mapa. Para que nuestro servicio WMS responda a las peticiones GetLegendGraphic debemos definir el apartado de leyenda en el Mapfile. Escribir la definicioń de la leyenda justo debajo de donde dice *#definicion de la leyenda del mapa* agregamos lo siguiente. ::
+   
+    #definicion de la leyenda del mapa
+    LEGEND
+      IMAGECOLOR -1 -1 -1
+      KEYSIZE 18 12
+      # LABEL object
+      LABEL
+        TYPE BITMAP
+        SIZE MEDIUM
+        COLOR 0 0 89
+      END
+      STATUS ON
+      TRANSPARENT ON
+    END
+
+#. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta.::
+   http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetLegendGraphic&SLD_VERSION=1.1.0&LAYER=pein&FORMAT=image/png&STYLE=default 
