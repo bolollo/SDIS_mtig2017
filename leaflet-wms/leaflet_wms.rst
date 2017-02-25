@@ -30,8 +30,8 @@ Utilizaremos la librería **Leaflet** para crear un cliente *ligero* web donde v
 			<meta charset="UTF-8">
 			<title>Visor simple con Leaflet</title>
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-			<style>
-				#mapid { height: 600px; width: 600px;}
+			<style type="text/css">
+			  #mapid { height: 600px; width: 600px;}
 			</style>
 		</head>
 		<body>
