@@ -19,7 +19,7 @@ Bootstrap
 
 Bootstrap es un framework de desarrollo de HTML, CSS y JS pensado para desarrollar aplicaciones Web responsivas que se adapten al móvil. 
 
-Bootstrap y todos sus complementos (plugins) dependen de la librería jQuery[#]_, por lo tanto en nuestras aplicaciones Web es necesario agregar la librería jQuery antes que la librería de Bootstrap.
+Bootstrap y todos sus complementos (plugins) dependen de la librería jQuery [#]_, por lo tanto en nuestras aplicaciones Web es necesario agregar la librería jQuery antes que la librería de Bootstrap.
 
 Bootstrap basa el diseño de la página en un sistema de cuadrículas para crear distribuciones de página por medio de una serie de filas y columnas que albergan su contenido. El sistema de cuadrículas está basado en 12 columnas que varian su tamaño dependiendo del dispositivo. Se basa en cuatro clases que dependen del tamaño del dispositivo.
 
