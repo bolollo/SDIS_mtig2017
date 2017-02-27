@@ -45,39 +45,39 @@ Crearemos una página Web que contiene un template básico de Bootstrap. Esta p�
 
 #. Agregar la barra de navegación (navbar). Justo debajo de donde comienza la etiqueta *body* escribir lo siguiente: ::
 
-   <!-- barra de navegación fija -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Nombre del proyecto</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#about">Acerca</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Desplegable <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Acción</a></li>
-                <li><a href="#">Otra acción</a></li>
-                <li><a href="#">Más acciones</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Cabecera de navegación</li>
-                <li><a href="#">Enlace separado</a></li>
-                <li><a href="#">Otro enlace separado</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+		<!-- barra de navegación fija -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Nombre del proyecto</a>
+		    </div>
+		    <div id="navbar" class="collapse navbar-collapse">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Inicio</a></li>
+		        <li><a href="#about">Acerca</a></li>
+		        <li><a href="#contact">Contacto</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Desplegable <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Acción</a></li>
+		            <li><a href="#">Otra acción</a></li>
+		            <li><a href="#">Más acciones</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li class="dropdown-header">Cabecera de navegación</li>
+		            <li><a href="#">Enlace separado</a></li>
+		            <li><a href="#">Otro enlace separado</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!--/.nav-collapse -->
+		  </div>
+		</nav>
 
 #. Abrir el navegador y ver que se muestra la barra de navegación de nuestra aplicación. Podemos ver que el texto *Hola mundo, Bootstrap!* queda debajo de la barra de navegación. ::
 
