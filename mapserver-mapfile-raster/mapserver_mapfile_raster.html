@@ -108,6 +108,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html">Clientes de mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html#id1">Clientes de mapas</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
 </ul>
@@ -347,34 +351,33 @@ END
 </li>
 <li><p class="first">Definir la capa del mapa.</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li>Crear la carpeta <em>datos</em> dentro del directorio del proyecto</li>
-<li>Copiar el archivo GeoTIFF (of25cv33sd0f287119s1r080.tif) en el directorio de datos</li>
-<li>Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice <em>#definición de las capas del mapa</em> agregamos lo siguiente.</li>
-</ol>
-<blockquote>
-<div><p>#Definición de la capa ortos
-LAYER</p>
-<blockquote>
-<div><p>NAME orto
-TYPE RASTER
-STATUS ON
-DATA &#8220;of25cv33sd0f287119s1r080.tif&#8221;
-PROJECTION
-&#8220;init=epsg:25831&#8221;
+<div><ol class="arabic">
+<li><p class="first">Crear la carpeta <em>datos</em> dentro del directorio del proyecto</p>
+</li>
+<li><p class="first">Copiar el archivo GeoTIFF (of25cv33sd0f287119s1r080.tif) en el directorio de datos</p>
+</li>
+<li><p class="first">Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice <em>#definición de las capas del mapa</em> agregamos lo siguiente.</p>
+<div class="highlight-python"><div class="highlight"><pre>#Definición de la capa ortos
+LAYER
+  NAME orto
+  TYPE RASTER
+  STATUS ON
+  DATA &quot;of25cv33sd0f287119s1r080.tif&quot;
+  PROJECTION
+  &quot;init=epsg:25831&quot;
+  END
+  #Descripción de la capa
+  METADATA
+    OWS_TITLE &quot;ortofotos&quot;
+    OWS_ABSTRACT &quot;metadatos&quot;
+    OWS_SRS &quot;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&quot;
+    OWS_EXTENT &quot;263747.60 4484436.53  527495.20 4748184.13&quot;
+  END
 END
-#Descripción de la capa
-METADATA</p>
-<blockquote>
-<div><p>OWS_TITLE &#8220;ortofotos&#8221;
-OWS_ABSTRACT &#8220;metadatos&#8221;
-OWS_SRS &#8220;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&#8221;
-OWS_EXTENT &#8220;263747.60 4484436.53  527495.20 4748184.13&#8221;</p>
-</div></blockquote>
-<p>END</p>
-</div></blockquote>
-<p>END</p>
-</div></blockquote>
+</pre></div>
+</div>
+</li>
+</ol>
 </div></blockquote>
 </li>
 <li><p class="first">Verificar que funcione el getCapabilities. Abrir el navegador y escribir:</p>

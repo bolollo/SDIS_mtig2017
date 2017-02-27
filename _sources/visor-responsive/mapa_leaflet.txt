@@ -100,7 +100,7 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 
 #. Sustituir el elemento h1 que se encuentra dentro del contenedor por el elemento *div* que contendrá el mapa. Debemos copiar lo siguiente dentro del container: ::
 
-   	<div id="mapid"></div>
+		<div id="mapid"></div>
 
 #. Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:
 		#. Justo al inicio del estilo::
@@ -131,7 +131,7 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 
 		.. |logo_border| image:: _images/mapa_bordes.png
 	  	:align: middle
-	  	:alt: mapa con bordes
+			:alt: mapa con bordes
 
 		+---------------+
 		| |logo_border| |

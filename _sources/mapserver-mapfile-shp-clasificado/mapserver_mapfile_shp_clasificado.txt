@@ -212,13 +212,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Debemos ver como respuesta nuestro mapa con todos los equipamientos sin clasificación
 
-.. |logo| image:: _images/mapaEquipamientosTodos.png
-  :align: middle
-  :alt: mapa todos equipamientos
+		.. |logo| image:: _images/mapaEquipamientosTodos.png
+		  :align: middle
+		  :alt: mapa todos equipamientos
 
-+--------+
-| |logo| |
-+--------+
+		+--------+
+		| |logo| |
+		+--------+
 
 #. Para clasificar los puntos del mapa debemos crear un *EXPRESSION* dentro de nuestro CLASS. Justo debajo del nombre del CLASS agregamos lo siguiente::
 
@@ -228,13 +228,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Si recargamos el mapa en el navegador ahora veremos muchos menos puntos y ha cambiado la simbolización.
 
-.. |logo_agric| image:: _images/mapaAgricultura.png
-  :align: middle
-  :alt: mapa equipamientos agricultura
+		.. |logo_agric| image:: _images/mapaAgricultura.png
+		  :align: middle
+		  :alt: mapa equipamientos agricultura
 
-+--------------+
-| |logo_agric| |
-+--------------+
+		+--------------+
+		| |logo_agric| |
+		+--------------+
 
 
 Ejercicio

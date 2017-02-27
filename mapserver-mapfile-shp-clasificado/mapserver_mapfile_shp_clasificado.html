@@ -108,6 +108,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html">Clientes de mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html#id1">Clientes de mapas</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
 </ul>
@@ -437,9 +441,8 @@ END
 </div>
 </li>
 <li><p class="first">Debemos ver como respuesta nuestro mapa con todos los equipamientos sin clasificación</p>
-</li>
-</ol>
-<table border="1" class="docutils">
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
@@ -448,7 +451,8 @@ END
 </tr>
 </tbody>
 </table>
-<ol class="arabic">
+</div></blockquote>
+</li>
 <li><p class="first">Para clasificar los puntos del mapa debemos crear un <em>EXPRESSION</em> dentro de nuestro CLASS. Justo debajo del nombre del CLASS agregamos lo siguiente:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">EXPRESSION</span> <span class="p">(</span><span class="s2">&quot;[TIPUS]&quot;</span> <span class="o">==</span> <span class="s2">&quot;Agricultura_Ramaderia_Pesca&quot;</span><span class="p">)</span>
 </pre></div>
@@ -457,9 +461,8 @@ END
 <li><p class="first">Cambiaremos el icono por la imagen correspondiente con agricultura. En lugar de SYMBOL &#8220;images/administracio_publica.gif&#8221; pondremos SYMBOL &#8220;images/agricultura.gif&#8221;</p>
 </li>
 <li><p class="first">Si recargamos el mapa en el navegador ahora veremos muchos menos puntos y ha cambiado la simbolización.</p>
-</li>
-</ol>
-<table border="1" class="docutils">
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
@@ -468,6 +471,9 @@ END
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+</li>
+</ol>
 <div class="section" id="ejercicio">
 <h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">

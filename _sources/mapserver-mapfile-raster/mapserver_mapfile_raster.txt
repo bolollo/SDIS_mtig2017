@@ -137,23 +137,23 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato GeoT
 
     #. Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice *#definición de las capas del mapa* agregamos lo siguiente. ::
 
-      #Definición de la capa ortos
-      LAYER
-        NAME orto
-        TYPE RASTER
-        STATUS ON
-        DATA "of25cv33sd0f287119s1r080.tif"
-        PROJECTION
-        "init=epsg:25831"
-        END
-        #Descripción de la capa
-        METADATA
-          OWS_TITLE "ortofotos"
-          OWS_ABSTRACT "metadatos"
-          OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
-          OWS_EXTENT "263747.60 4484436.53  527495.20 4748184.13"
-        END
-      END
+	      #Definición de la capa ortos
+	      LAYER
+	        NAME orto
+	        TYPE RASTER
+	        STATUS ON
+	        DATA "of25cv33sd0f287119s1r080.tif"
+	        PROJECTION
+	        "init=epsg:25831"
+	        END
+	        #Descripción de la capa
+	        METADATA
+	          OWS_TITLE "ortofotos"
+	          OWS_ABSTRACT "metadatos"
+	          OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
+	          OWS_EXTENT "263747.60 4484436.53  527495.20 4748184.13"
+	        END
+	      END
 
 #. Verificar que funcione el getCapabilities. Abrir el navegador y escribir:
 

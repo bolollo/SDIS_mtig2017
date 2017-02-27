@@ -59,7 +59,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   * STYLES = si no hay estilo se puede dejar en blanco
 
-  * SRS ó CRS = 23031 *(código EPSG del sistema de referencia)*
+  * SRS o CRS = 23031 *(código EPSG del sistema de referencia)*
 
   * BBOX = minx,miny,maxx,maxy *(caja de coordenadas del mapa)*
 
@@ -98,7 +98,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   * STYLES = si no hay estilo se puede dejar en blanco
 
-  * SRS ó CRS = 23031 *(código EPSG del sistema de referencia)*
+  * SRS o CRS = 23031 *(código EPSG del sistema de referencia)*
 
   * BBOX = minx,miny,maxx,maxy *(caja de coordenadas del mapa)*
 

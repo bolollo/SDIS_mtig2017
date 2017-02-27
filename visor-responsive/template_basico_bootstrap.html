@@ -109,6 +109,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html">Clientes de mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html#id1">Clientes de mapas</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
 </ul>
@@ -258,63 +262,40 @@
 </li>
 <li><p class="first">Agregar la barra de navegación (navbar). Justo debajo de donde comienza la etiqueta <em>body</em> escribir lo siguiente:</p>
 <div class="highlight-python"><div class="highlight"><pre>&lt;!-- barra de navegación fija --&gt;
+&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Nombre del proyecto&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;Acerca&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Desplegable &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Acción&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Otra acción&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Más acciones&lt;/a&gt;&lt;/li&gt;
+            &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;dropdown-header&quot;&gt;Cabecera de navegación&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enlace separado&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Otro enlace separado&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
 </pre></div>
 </div>
-<blockquote>
-<div><dl class="docutils">
-<dt>&lt;nav class=&#8221;navbar navbar-default navbar-fixed-top&#8221;&gt;</dt>
-<dd><dl class="first docutils">
-<dt>&lt;div class=&#8221;container&#8221;&gt;</dt>
-<dd><dl class="first docutils">
-<dt>&lt;div class=&#8221;navbar-header&#8221;&gt;</dt>
-<dd><dl class="first docutils">
-<dt>&lt;button type=&#8221;button&#8221; class=&#8221;navbar-toggle collapsed&#8221; data-toggle=&#8221;collapse&#8221; data-target=&#8221;#navbar&#8221; aria-expanded=&#8221;false&#8221; aria-controls=&#8221;navbar&#8221;&gt;</dt>
-<dd><p class="first last">&lt;span class=&#8221;sr-only&#8221;&gt;Toggle navigation&lt;/span&gt;
-&lt;span class=&#8221;icon-bar&#8221;&gt;&lt;/span&gt;
-&lt;span class=&#8221;icon-bar&#8221;&gt;&lt;/span&gt;
-&lt;span class=&#8221;icon-bar&#8221;&gt;&lt;/span&gt;</p>
-</dd>
-</dl>
-<p class="last">&lt;/button&gt;
-&lt;a class=&#8221;navbar-brand&#8221; href=&#8221;#&#8221;&gt;Nombre del proyecto&lt;/a&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;
-&lt;div id=&#8221;navbar&#8221; class=&#8221;collapse navbar-collapse&#8221;&gt;</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>&lt;ul class=&#8221;nav navbar-nav&#8221;&gt;</dt>
-<dd><p class="first">&lt;li class=&#8221;active&#8221;&gt;&lt;a href=&#8221;#&#8221;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#about&#8221;&gt;Acerca&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#contact&#8221;&gt;Contacto&lt;/a&gt;&lt;/li&gt;
-&lt;li class=&#8221;dropdown&#8221;&gt;</p>
-<blockquote>
-<div><p>&lt;a href=&#8221;#&#8221; class=&#8221;dropdown-toggle&#8221; data-toggle=&#8221;dropdown&#8221; role=&#8221;button&#8221; aria-haspopup=&#8221;true&#8221; aria-expanded=&#8221;false&#8221;&gt;Desplegable &lt;span class=&#8221;caret&#8221;&gt;&lt;/span&gt;&lt;/a&gt;
-&lt;ul class=&#8221;dropdown-menu&#8221;&gt;</p>
-<blockquote>
-<div><p>&lt;li&gt;&lt;a href=&#8221;#&#8221;&gt;Acción&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#&#8221;&gt;Otra acción&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#&#8221;&gt;Más acciones&lt;/a&gt;&lt;/li&gt;
-&lt;li role=&#8221;separator&#8221; class=&#8221;divider&#8221;&gt;&lt;/li&gt;
-&lt;li class=&#8221;dropdown-header&#8221;&gt;Cabecera de navegación&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#&#8221;&gt;Enlace separado&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#8221;#&#8221;&gt;Otro enlace separado&lt;/a&gt;&lt;/li&gt;</p>
-</div></blockquote>
-<p>&lt;/ul&gt;</p>
-</div></blockquote>
-<p class="last">&lt;/li&gt;</p>
-</dd>
-</dl>
-<p>&lt;/ul&gt;</p>
-</div></blockquote>
-<p class="last">&lt;/div&gt;&lt;!&#8211;/.nav-collapse &#8211;&gt;</p>
-</dd>
-</dl>
-<p class="last">&lt;/div&gt;</p>
-</dd>
-</dl>
-<p>&lt;/nav&gt;</p>
-</div></blockquote>
 </li>
 <li><p class="first">Abrir el navegador y ver que se muestra la barra de navegación de nuestra aplicación. Podemos ver que el texto <em>Hola mundo, Bootstrap!</em> queda debajo de la barra de navegación.</p>
 <div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
