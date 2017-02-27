@@ -103,21 +103,22 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 		<div id="mapid"></div>
 
 #. Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:
-		#. Justo al inicio del estilo::
 
-				html, body, #container {
-			  	height: 100%;
-			  	width: 100%;
-			  	overflow: hidden;
-				}
+		#. Justo al inicio del estilo ::
 
-		#. Al final del estilo::
+			html, body, #container {
+				height: 100%;
+			  width: 100%;
+			  overflow: hidden;
+			}
 
-		   	#mapid {
-					display: block;
-					width: auto;
-					height: 100%;
-				}
+		#. Al final del estilo ::
+
+			#mapid {
+				display: block;
+				width: auto;
+				height: 100%;
+			}
 
 #. Crear el objeto mapa y cargar la capa de OpenStreetMap. Para ellos escribir lo siguiente en el apartado de javascript (script) al final de la página. ::
 
@@ -130,7 +131,7 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 #. Recargamos la página en el navegador y debemos ver el mapa. Podemos observar que el mapa tiene un espacio en blanco en la parte superior y en los lados.
 
 		.. |logo_border| image:: _images/mapa_bordes.png
-	  	:align: middle
+			:align: middle
 			:alt: mapa con bordes
 
 		+---------------+
@@ -146,8 +147,8 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 #. Ahora si recargamos la página veremos el mapa a pantalla completa.
 
 		.. |logo_full_map| image:: _images/mapa_pantalla_completa.png
-	  	:align: middle
-	  	:alt: mapa pantalla completa
+			:align: middle
+			:alt: mapa pantalla completa
 
 		+-----------------+
 		| |logo_full_map| |
