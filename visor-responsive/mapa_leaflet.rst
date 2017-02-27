@@ -108,8 +108,8 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 
 			html, body, #container {
 				height: 100%;
-			  width: 100%;
-			  overflow: hidden;
+				width: 100%;
+				overflow: hidden;
 			}
 
 		#. Al final del estilo ::
@@ -140,7 +140,7 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 
 #. Para eliminar estos espacios en blanco y tener el mapa a pantalla completa debemos modificar el estilo *body > .container-fluid*, para ellos escribir: ::
 
-   	body > .container-fluid {
+		body > .container-fluid {
 			padding: 50px 0 0 0;
 		}
 
