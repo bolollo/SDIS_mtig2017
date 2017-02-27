@@ -30,21 +30,21 @@ Añadiremos a nuestro mapa un control que permite la geolocalización del usuari
 
 #. Inicializar el plugin. En el apartado de javascript de nuestra página luego de la declaración del objeto mapa agregamos: ::
 
-   	L.control.locate().addTo(map);
+		L.control.locate().addTo(map);
 
 #. Abrir el navegador y ver que nos aparece un nuevo control en el mapa. ::
 
-	http://localhost:81/visor/movil.html
+		http://localhost:81/visor/movil.html
 
-#. Al presionar sobre el control nos aparece un mensaje del navegador preguntando si queremos compartir nuestra ubicación. Seleccionamos la opción de compartir y nuestra aplicación debe mostrar nuestra posición en el mapa. ::
+#. Al presionar sobre el control nos aparece un mensaje del navegador preguntando si queremos compartir nuestra ubicación. Seleccionamos la opción de compartir y nuestra aplicación debe mostrar nuestra posición en el mapa.
 
-	.. |logo_geolocalizacion| image:: _images/mapa_geolocalizacion.png
-	  	:align: middle
-	  	:alt: mapa con geolocalización
+		.. |logo_geolocalizacion| image:: _images/mapa_geolocalizacion.png
+			:align: middle
+			:alt: mapa con geolocalización
 
-	+------------------------+
-	| |logo_geolocalizacion| |
-	+------------------------+
+		+------------------------+
+		| |logo_geolocalizacion| |
+		+------------------------+
 
 .. [#] https://github.com/domoritz/leaflet-locatecontrol
 .. [#] http://fontawesome.io/

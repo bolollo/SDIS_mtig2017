@@ -323,30 +323,29 @@
 </pre></div>
 </div>
 </li>
-<li><dl class="first docutils">
-<dt>Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:</dt>
-<dd><ol class="first last arabic">
-<li><p class="first">Justo al inicio del estilo:</p>
+<li><p class="first">Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Justo al inicio del estilo</p>
 <div class="highlight-python"><div class="highlight"><pre>html, body, #container {
-height: 100%;
-width: 100%;
-overflow: hidden;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
 }
 </pre></div>
 </div>
 </li>
-<li><p class="first">Al final del estilo:</p>
+<li><p class="first">Al final del estilo</p>
 <div class="highlight-python"><div class="highlight"><pre>#mapid {
-                display: block;
-                width: auto;
-                height: 100%;
-        }
+        display: block;
+        width: auto;
+        height: 100%;
+}
 </pre></div>
 </div>
 </li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 <li><p class="first">Crear el objeto mapa y cargar la capa de OpenStreetMap. Para ellos escribir lo siguiente en el apartado de javascript (script) al final de la página.</p>
 <div class="highlight-python"><div class="highlight"><pre>var map = L.map(&#39;mapid&#39;).setView([41.68,        1.85], 9);
@@ -359,21 +358,12 @@ L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
 </li>
 <li><p class="first">Recargamos la página en el navegador y debemos ver el mapa. Podemos observar que el mapa tiene un espacio en blanco en la parte superior y en los lados.</p>
 <blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">middle
-:alt: mapa con bordes</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><img alt="logo_border" src="../_images/mapa_bordes.png" /></td>
+<tr class="row-odd"><td><img alt="mapa con bordes" class="align-middle" src="../_images/mapa_bordes.png" /></td>
 </tr>
 </tbody>
 </table>
@@ -381,29 +371,19 @@ L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
 </li>
 <li><p class="first">Para eliminar estos espacios en blanco y tener el mapa a pantalla completa debemos modificar el estilo <em>body &gt; .container-fluid</em>, para ellos escribir:</p>
 <div class="highlight-python"><div class="highlight"><pre>body &gt; .container-fluid {
-                padding: 50px 0 0 0;
-        }
+        padding: 50px 0 0 0;
+}
 </pre></div>
 </div>
 </li>
 <li><p class="first">Ahora si recargamos la página veremos el mapa a pantalla completa.</p>
 <blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">middle</td>
-</tr>
-<tr class="field-even field"><th class="field-name">alt:</th><td class="field-body">mapa pantalla completa</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><img alt="logo_full_map" src="../_images/mapa_pantalla_completa.png" /></td>
+<tr class="row-odd"><td><img alt="mapa pantalla completa" class="align-middle" src="../_images/mapa_pantalla_completa.png" /></td>
 </tr>
 </tbody>
 </table>
