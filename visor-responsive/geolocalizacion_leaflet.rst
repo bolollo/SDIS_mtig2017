@@ -22,7 +22,7 @@ Añadiremos a nuestro mapa un control que permite la geolocalización del usuari
 #. Agregar las hojas de estilo. En el *head* de nuestra página agregar las hojas de estilo, justo debajo de la hoja de estilo del Leaflet. Este plugin hace uso del conjunto de iconos fontawesome [#]_ por lo tanto también debemos cargar la hoja de estilo de fontawesome. Para ello copiar los siguiente: ::
 
    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.locatecontrol/0.60.0/L.Control.Locate.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.locatecontrol/0.60.0/L.Control.Locate.min.css" />
 
 #. Agregar la librería javascript del plugin. Al final de nuestra página debemos añadir la librería justo debajo de donde incluimos la librería de Leaflet. Para ellos escribimos lo siguiente: ::
 
