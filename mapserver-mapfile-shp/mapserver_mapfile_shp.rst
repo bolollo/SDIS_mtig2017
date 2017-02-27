@@ -29,10 +29,10 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Crear el objeto MAP. ::
 
-    # Inicio arxivo MAP
+    # Inicio archivo MAP
     MAP
 
-    #Nombre de la aplicación no debe contener espacios ni carácteres especiales
+    #Nombre de la aplicación no debe contener espacios ni caracteres especiales
     NAME plan_pein
 
     #Estado
@@ -47,7 +47,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     #Tamaño máximo de la imagen
     MAXSIZE 4096
 
-    #Ruta de la cartografia
+    #Ruta de la cartografía
     SHAPEPATH "datos"
 
     #Color de fondo
@@ -73,13 +73,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     "init=epsg:25831"
     END
 
-    #Definició de las capacidades
+    #Definición de las capacidades
     WEB
      IMAGEPATH "tmp/"
      IMAGEURL "tmp/"
      METADATA
         OWS_TITLE "Aplicación OGC"
-        OWS_ABSTRACT "Ejemplo de interoperabilidad utilitzando Minnesota MapServer"
+        OWS_ABSTRACT "Ejemplo de interoperabilidad utilizando Minnesota MapServer"
         OWS_ENABLE_REQUEST "*"
         OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map"
         OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
@@ -114,30 +114,30 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
       END
     END
 
-    #definicion de la leyenda del mapa
+    #definición de la leyenda del mapa
 
-    #definicion de las capas del mapa
+    #definición de las capas del mapa
 
-    #Final arxiu MAP
+    #Final archivo MAP
     END
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
 		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map
 
-#. Comprobar que retorna el siguente mensaje: ::
+#. Comprobar que retorna el siguiente mensaje: ::
 
 		mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 
 #. Definir la capa del mapa.
 
-    #. Crear la carperta *datos* dentro del directorio del proyecto
+    #. Crear la carpeta *datos* dentro del directorio del proyecto
 
     #. Descargar el archivo :download:`pein_etrs89.zip <pein_etrs89.zip>`
 
     #. Descomprimir el archivo pein_etrs89.zip dentro de la carpeta *datos*
 
-    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
+    #. Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice *#definición de las capas del mapa* agregamos lo siguiente. ::
 
         #Definición de la capa pein
         LAYER
@@ -160,7 +160,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
           END
           #Permite exportar GML
           DUMP TRUE
-          #Descripció de la capa
+          #Descripción de la capa
           METADATA
         	  OWS_TITLE "Plan Espacios de Interés Natural"
             OWS_ABSTRACT "metadatos"
@@ -179,21 +179,21 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 		Debemos ver el archivo xml con la descripción de las capacidades del servidor.
 
-#. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
+#. Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
   	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: _images/mapaPein.png
-  :align: middle
-  :alt: mapa pein
+		.. |logo| image:: _images/mapaPein.png
+		  :align: middle
+		  :alt: mapa pein
 
-+--------+
-| |logo| |
-+--------+
+		+--------+
+		| |logo| |
+		+--------+
 
-#. En la carpeta del proyecto creamos el archivo *info.html* que es el encargado de mostrar la información de los elementos seleccionados al hacer una petición getFeatureInfo.::
+#. En la carpeta del proyecto creamos el archivo *info.html* que es el encargado de mostrar la información de los elementos seleccionados al hacer una petición getFeatureInfo. ::
 
 		<!-- MapServer Template -->
 		<html>
@@ -222,13 +222,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 		</body>
 		</html>
 
-#. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta.::
+#. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta. ::
 
 		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetFeatureInfo&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&QUERY_LAYERS=pein&INFO_FORMAT=text/html&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768&X=418&Y=509
 
-#. Crear la leyenda del mapa. Para que nuestro servicio WMS responda a las peticiones GetLegendGraphic debemos definir el apartado de leyenda en el Mapfile. Escribir la definicioń de la leyenda justo debajo de donde dice *#definicion de la leyenda del mapa* agregamos lo siguiente. ::
-   
-    #definicion de la leyenda del mapa
+#. Crear la leyenda del mapa. Para que nuestro servicio WMS responda a las peticiones GetLegendGraphic debemos definir el apartado de leyenda en el Mapfile. Escribir la definición de la leyenda justo debajo de donde dice *#definición de la leyenda del mapa* agregamos lo siguiente. ::
+
+    #definición de la leyenda del mapa
     LEGEND
       IMAGECOLOR -1 -1 -1
       KEYSIZE 18 12
@@ -244,4 +244,4 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Comprobar que al interrogar a nuestro mapa nos retorna la información correcta. ::
 
-    http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetLegendGraphic&SLD_VERSION=1.1.0&LAYER=pein&FORMAT=image/png&STYLE=default 
+    http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&VERSION=1.3.0&SERVICE=WMS&REQUEST=GetLegendGraphic&SLD_VERSION=1.1.0&LAYER=pein&FORMAT=image/png&STYLE=default

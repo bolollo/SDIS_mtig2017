@@ -29,10 +29,10 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Crear el objeto MAP. ::
 
-    # Inicio arxivo MAP
+    # Inicio archivo MAP
     MAP
 
-    #Nombre de la aplicación no debe contener espacios ni carácteres especiales
+    #Nombre de la aplicación no debe contener espacios ni caracteres especiales
     NAME equipamientos
 
     #Estado
@@ -47,7 +47,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     #Tamaño máximo de la imagen
     MAXSIZE 4096
 
-    #Ruta de la cartografia
+    #Ruta de la cartografía
     SHAPEPATH "datos"
 
     #Color de fondo
@@ -73,13 +73,13 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
     "init=epsg:25831"
     END
 
-    #Definició de las capacidades
+    #Definición de las capacidades
     WEB
      IMAGEPATH "tmp/"
      IMAGEURL "tmp/"
      METADATA
         OWS_TITLE "Aplicación OGC"
-        OWS_ABSTRACT "Ejemplo de interoperabilidad utilitzando Minnesota MapServer"
+        OWS_ABSTRACT "Ejemplo de interoperabilidad utilizando Minnesota MapServer"
         OWS_ENABLE_REQUEST "*"
         OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map"
         OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
@@ -114,36 +114,36 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
       END
     END
 
-    #definicion de la leyenda del mapa
+    #definición de la leyenda del mapa
 
-    #definicion de las capas del mapa
+    #definición de las capas del mapa
 
-    #Final arxiu MAP
+    #Final archivo MAP
     END
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
 		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map
 
-#. Comprobar que retorna el siguente mensaje: ::
+#. Comprobar que retorna el siguiente mensaje: ::
 
 		mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 
 #. Definir la capa del mapa.
 
-    #. Crear la carperta *datos* dentro del directorio del proyecto
+    #. Crear la carpeta *datos* dentro del directorio del proyecto
 
     #. Descargar el archivo :download:`equipamientos.zip <equipamientos.zip>`
 
     #. Descomprimir el archivo equipamientos.zip dentro de la carpeta *datos*
 
-    #. Crear la carperta *images* dentro del directorio del proyecto
+    #. Crear la carpeta *images* dentro del directorio del proyecto
 
     #. Descargar el archivo :download:`images.zip <images.zip>`
 
     #. Descomprimir el archivo images.zip dentro de la carpeta *images*
 
-    #. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
+    #. Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice *#definición de las capas del mapa* agregamos lo siguiente. ::
 
         LAYER
 	      NAME "administracio_publica"
@@ -161,7 +161,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 	         "init=epsg:25831"
 	      END
 		  CLASS
-			NAME "Administracio Publica"
+			NAME "Administración Pública"
 			TEMPLATE 'info_new.htm'
 			TEXT "[NOM]"
 			STYLE
@@ -186,10 +186,10 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 			END
 		  END
 		  METADATA
-		    "OWS_title" "Administracio Publica"
-		    "ows_group_title" "Equipaments"
+		    "OWS_title" "Administración Pública"
+		    "ows_group_title" "Equipamientos"
 			"ows_featureid" "ID"
-		    "OWS_abstract" "Equipaments Gencat"
+		    "OWS_abstract" "Equipamientso Gencat"
 		    "OWS_extent" "256900.000 4484809.998  533550.000 4751559.998"
 		    "gml_include_items" "all"
 		    "OWS_SRS" "EPSG:25831 EPSG:4326 EPSG:23031 EPSG:32631 EPSG:4258 EPSG:4230 EPSG:3857"
@@ -206,7 +206,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 		Debemos ver el archivo xml con la descripción de las capacidades del servidor.
 
-#. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
+#. Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
   	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
 

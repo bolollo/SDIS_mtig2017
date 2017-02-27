@@ -17,22 +17,22 @@ Bootstrap
 Bootstrap
 =========
 
-Bootstrap es un framework de desarrollo de HTML, CSS y JS pensado para desarrollar aplicaciones Web responsivas que se adapten al móvil. 
+Bootstrap es un framework de desarrollo de HTML, CSS y JS pensado para desarrollar aplicaciones Web responsivas que se adapten al móvil.
 
 Bootstrap y todos sus complementos (plugins) dependen de la librería jQuery [#]_, por lo tanto en nuestras aplicaciones Web es necesario agregar la librería jQuery antes que la librería de Bootstrap.
 
-Bootstrap basa el diseño de la página en un sistema de cuadrículas para crear distribuciones de página por medio de una serie de filas y columnas que albergan su contenido. El sistema de cuadrículas está basado en 12 columnas que varian su tamaño dependiendo del dispositivo. Se basa en cuatro clases que dependen del tamaño del dispositivo.
+Bootstrap basa el diseño de la página en un sistema de cuadrículas para crear distribuciones de página por medio de una serie de filas y columnas que albergan su contenido. El sistema de cuadrículas está basado en 12 columnas que varían su tamaño dependiendo del dispositivo. Se basa en cuatro clases que dependen del tamaño del dispositivo.
 
 +----------------------------------------------+-----------------------------------------+--------------------------------------------+-----------------------------------------+
 | Dispositivos muy pequeños Teléfonos (<768px) | Dispositivos pequeños Tabletas (≥768px) | Dispositivos medianos Escritorios (≥992px) | Dispositivos grandes Escritorios(≥1200px) |
 +----------------------------------------------+-----------------------------------------+--------------------------------------------+-----------------------------------------+
 
-Bootstrap tiene una serie de componentes y complementos Javascript que facilitan el desarrollo de las aplicaciones Web. Algunos de los componentes son: botones, barras de navegación, ventanas de dialogos, listas, control de pestañas, etc.
+Bootstrap tiene una serie de componentes y complementos Javascript que facilitan el desarrollo de las aplicaciones Web. Algunos de los componentes son: botones, barras de navegación, ventanas de diálogos, listas, control de pestañas, etc.
 
-A continuación crearemos una página web secilla utilizando Bootstrap.
+A continuación crearemos una página web sencilla utilizando Bootstrap.
 
 #. Crear una carpeta llamada *visor* dentro del directorio htdocs del Apache. ::
-   	
+
 		C:\ms4w\Apache\htdocs\visor
 
 #. Crear el archivo *movil.html* dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos las librerías jQuery y Bootstrap. Para ello escribir los siguiente: ::
@@ -57,7 +57,7 @@ A continuación crearemos una página web secilla utilizando Bootstrap.
 		</html>
 
 #. Abrir el navegador y ver que nuestra aplicación está funcionando correctamente. ::
-   
+
 		http://localhost:81/visor/movil.html
 
 .. [#] https://jquery.com/

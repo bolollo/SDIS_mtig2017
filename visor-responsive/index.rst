@@ -1,7 +1,7 @@
 Aplicación Web con diseño responsivo con Leaflet
 ================================================
 
-El presente taller explica como crear una aplicación Web con diseño responsivo utilizando el framework Bootstrap [#]_ junto con la librería Leaflet [#]_
+El presente taller explica cómo crear una aplicación Web con diseño responsivo utilizando el framework Bootstrap [#]_ junto con la librería Leaflet [#]_
 
 Contenido:
 

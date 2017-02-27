@@ -21,9 +21,9 @@ El *Mapfile* (.map) es el corazón de MapServer, este archivo define las relacio
 
 A la hora de crear el archivo map se han de tener en cuenta los siguientes aspectos:
 
-* MapServer **NO** distigue entre mayúsculas y minúsculas.
+* MapServer **NO** distingue entre mayúsculas y minúsculas.
 
-* El Mapfile se lee de arriba a abajo por MapServer; esto significa que las capas situadas cerca de la parte superior del Mapfile serán dibujadas antes de aquellas cerca del final del archivo. Por lo tanto, los usuarios normalmente colocan imágenes de fondo y otros tipos de capas de fondo cerca de la parte superior de su mapfile, y líneas y puntos cerca de la parte inferior de su mapfile.
+* El Mapfile se lee de arriba a abajo por MapServer; esto significa que las capas situadas cerca de la parte superior del Mapfile serán dibujadas antes de aquellas cerca del final del archivo. Por lo tanto, los usuarios normalmente colocan imágenes de fondo y otros tipos de capas de fondo cerca de la parte superior de su Mapfile, y líneas y puntos cerca de la parte inferior de su Mapfile.
 
 * Las cadenas que contienen caracteres no alfanuméricos o una palabra clave de MapServer deben ir entre comillas. Se recomienda poner TODAS las cadenas en comillas dobles.
 
@@ -46,11 +46,11 @@ A la hora de crear el archivo map se han de tener en cuenta los siguientes aspec
 Principales objetos del archivo .map
 ####################################
 
-**MAP:** Es el objeto principal del mapfile y contiene a todos los objetos
+**MAP:** Es el objeto principal del Mapfile y contiene a todos los objetos
 
 **NAME:** Nombre del proyecto
 
-**STATUS:** Indica el estado de visualización del proyecto. Sus valores pueden ser ON, DEFAULT o OFF, estos valores pueden ser cambiados en ejecución.
+**STATUS:** Indica el estado de visualización del proyecto. Sus valores pueden ser ON, DEFAULT u OFF, estos valores pueden ser cambiados en ejecución.
 
 **SIZE:** Tamaño del píxel del mapa.
 
@@ -89,9 +89,9 @@ Principales objetos del archivo .map
   **LABELITEM:** Nombre del campo para etiquetar.
 
   **DUMP:** Sus valores pueden ser true o false y permiten exportar la capa al
-  formato GML. *Nota*: desde la version 6.0 no se usa y se debe especificar en el METADATA de la capa.
+  formato GML. *Nota*: desde la versión 6.0 no se usa y se debe especificar en el METADATA de la capa.
 
-  **CLASS:** Este objeto se utiliza para crear temáticos o simplemente para dar color a las capas. Sus objeto más importantes son:
+  **CLASS:** Este objeto se utiliza para crear temáticos o simplemente para dar color a las capas. Sus objetos más importantes son:
 
     **NAME:** Nombre de la clase.
 
@@ -119,6 +119,6 @@ Principales objetos del archivo .map
 
       **OUTLINECOLOR:** Color usado para dibujar el contorno.
 
-      **SYMBOL:** Simbolo usado para representar las geometrías
+      **SYMBOL:** Símbolo usado para representar las geometrías
 
 Estos son algunos de los objetos que se pueden definir en el archivo .map, para ver todos sus objetos: http://www.mapserver.org/mapfile/index.html

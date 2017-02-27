@@ -17,10 +17,10 @@ Bootstrap - Template básico
 Bootstrap - Template básico
 ===========================
 
-Crearemos una página Web que contine un template básico de Bootstrap. Esta página contendrá una barra de navegación fija en la parte superior de la página.
+Crearemos una página Web que contiene un template básico de Bootstrap. Esta página contendrá una barra de navegación fija en la parte superior de la página.
 
 #. Crear una carpeta llamada *visor* dentro del directorio htdocs del Apache. ::
-   	
+
 		C:\ms4w\Apache\htdocs\visor
 
 #. Crear el archivo *movil.html* dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html y cargaremos las librerías jQuery y Bootstrap. Para ello escribir los siguiente: ::
@@ -44,7 +44,7 @@ Crearemos una página Web que contine un template básico de Bootstrap. Esta pá
 		</html>
 
 #. Agregar la barra de navegación (navbar). Justo debajo de donde comienza la etiqueta *body* escribir lo siguiente: ::
-   
+
    <!-- barra de navegación fija -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -80,28 +80,28 @@ Crearemos una página Web que contine un template básico de Bootstrap. Esta pá
     </nav>
 
 #. Abrir el navegador y ver que se muestra la barra de navegación de nuestra aplicación. Podemos ver que el texto *Hola mundo, Bootstrap!* queda debajo de la barra de navegación. ::
-   
+
 		http://localhost:81/visor/movil.html
 
 #. Corregir el error de que el contenido de la página queda debajo de la barra de navegación. Para ello crearemos el elemento contenedor donde pondremos todo el contenido de nuestra Web. Debajo de donde termina la definición de la barra de navegación escribimos los siguiente: ::
-   
+
 		<!-- inicio contenedor del contenido -->
     <div class="container-fluid">
-			
+
     </div>
 
 #. Mover el elemento H1 con el texto *Hola mundo, Bootstrap!* dentro del contenedor
-   
+
 #. Si recargamos la página en el navegador vemos que todavía sale el contenido debajo del navbar. Esto es debido a que falta definir el estilo del contenedor. Para esto escribimos lo siguiente justo antes de donde cerramos el *head* de la página. ::
-   
+
 		<style type="text/css">
 			body > .container-fluid {
 				padding: 60px 15px 0;
-			}			
+			}
 		</style>
 
 #. Ahora si recargamos la página veremos que el contenido aparece correctamente.
-   
+
 	.. |logo_template| image:: _images/template_basico.png
 	  :align: middle
 	  :alt: template básico de Bootstrap
@@ -109,4 +109,3 @@ Crearemos una página Web que contine un template básico de Bootstrap. Esta pá
 	+-----------------+
 	| |logo_template| |
 	+-----------------+
-   

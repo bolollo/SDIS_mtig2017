@@ -1,6 +1,6 @@
-**********************************
+*********************************
 Conceptos básicos de Geoservicios
-**********************************
+*********************************
 
 .. note::
 
@@ -17,7 +17,7 @@ Conceptos básicos de Geoservicios
 	La mayorías de los conceptos son sacados del Libro libre SIG de Victor Olaya http://volaya.github.io/libro-sig/
 
 Geoservicio
-============
+===========
 
 Un geoservicio es un servidor que ofrece algún servicio relacionado con el ámbito SIG, su principal función es acceder a información geoespacial existente en diferentes formatos y servir dicha información a clientes a través de protocolos estándares.
 
@@ -41,5 +41,6 @@ Las capacidades fundamentales a las que responden los servidores dentro del ámb
   Las posibilidades que estos servicios brindan son muy numerosas. Por una parte, pueden añadirse funcionalidades avanzadas a interfaces Web, llevando a estas las capacidades propias de los SIG de escritorio. Por otra, la difusión de algoritmos de análisis geográfico resulta más sencilla, pudiendo ofrecerse estos a todo tipo de usuarios sin necesidad de ningún software especializado. Y por último, en ciertos casos pueden rebajarse los tiempos de proceso, ya que, en el caso de operaciones complejas, la mayor potencia del servidor respecto al cliente puede resultar en un mayor rendimiento. El reparto de tareas entre varios servidores (computación distribuida) es otra de las posibilidades que pueden a su vez ampliar la eficiencia de los procesos.
 
 Referencias
-===========
+###########
+
 Libro libre SIG de Victor Olaya http://volaya.github.io/libro-sig/

@@ -17,7 +17,7 @@ MapServer - Mapfile carga de mosaico de imágenes raster
 MapServer - Mapfile carga de mosaico de imágenes raster
 =======================================================
 
-Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes en formato GeoTIFF (.tif).
+Configuración de un archivo Mapfile (.map) para cargar un mosaico de imágenes en formato GeoTIFF (.tif).
 
 .. warning:: Los todos los datos utilizados en este ejemplo son datos de ejemplo y no tienen ningún carácter oficial. Igualmente los datos pueden proceder de fuentes diferentes a las indicadas en la configuración del servicio y ser datos no reales.
 
@@ -29,10 +29,10 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
 
 #. Crear el objeto MAP. ::
 
-    # Inicio arxivo MAP
+    # Inicio archivo MAP
     MAP
 
-    #Nombre de la aplicación no debe contener espacios ni carácteres especiales
+    #Nombre de la aplicación no debe contener espacios ni caracteres especiales
     NAME mosaico
 
     #Estado
@@ -47,7 +47,7 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
     #Tamaño máximo de la imagen
     MAXSIZE 4096
 
-    #Ruta de la cartografia
+    #Ruta de la cartografía
     SHAPEPATH "datos"
 
     #Color de fondo
@@ -73,13 +73,13 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
     "init=epsg:25831"
     END
 
-    #Definició de las capacidades
+    #Definición de las capacidades
     WEB
      IMAGEPATH "tmp/"
      IMAGEURL "tmp/"
      METADATA
         OWS_TITLE "Aplicación OGC"
-        OWS_ABSTRACT "Ejemplo de interoperabilidad utilitzando Minnesota MapServer"
+        OWS_ABSTRACT "Ejemplo de interoperabilidad utilizando Minnesota MapServer"
         OWS_ENABLE_REQUEST "*"
         OWS_ONLINERESOURCE "http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map"
         OWS_SRS "EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631"
@@ -114,34 +114,34 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
       END
     END
 
-    #definicion de la leyenda del mapa
+    #definición de la leyenda del mapa
 
-    #definicion de las capas del mapa
+    #definición de las capas del mapa
 
-    #Final arxiu MAP
+    #Final archivo MAP
     END
 
 #. Comprobar que no tenemos ningún error en el Mapfile. Abrir el navegador y escribir: ::
 
 		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map
 
-#. Comprobar que retorna el siguente mensaje: ::
+#. Comprobar que retorna el siguiente mensaje: ::
 
 		mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 
-#. Crear la carperta *datos* dentro del directorio del proyecto
+#. Crear la carpeta *datos* dentro del directorio del proyecto
 
 #. Copiar los archivos GeoTIFF dentro de la carpeta *datos*
 
-#. Generar el shapefile que contiene el indice de las imágenes raster.::
+#. Generar el shapefile que contiene el índice de las imágenes raster. ::
 
     gdaltindex mosaico.shp *.tif
 
-#. Generar el índice espacial basado en quadtree para un conjunto de datos shapefile.::
+#. Generar el índice espacial basado en quadtree para un conjunto de datos shapefile. ::
 
     shptree mosaico.shp
 
-#. Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice *#definicion de las capas del mapa* agregamos lo siguiente. ::
+#. Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice *#definición de las capas del mapa* agregamos lo siguiente. ::
 
     #GeoTifF con cabecera y world file
     LAYER
@@ -168,33 +168,33 @@ Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes e
 
 		Debemos ver el archivo xml con la descripción de las capacidades del servidor.
 
-#. Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir: ::
+#. Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
   	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=orto&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa
 
-.. |logo| image:: _images/mapaMosaico.png
-  :align: middle
-  :alt: mapa mosaico
+		.. |logo| image:: _images/mapaMosaico.png
+		  :align: middle
+		  :alt: mapa mosaico
 
-+--------+
-| |logo| |
-+--------+
+		+--------+
+		| |logo| |
+		+--------+
 
-#. Para mejorar el rendimiento del WMS debemos generar los *overview* de las imágenes. Esto sirve para generar imágenes de vista general de menor resolución.::
+#. Para mejorar el rendimiento del WMS debemos generar los *overview* de las imágenes. Esto sirve para generar imágenes de vista general de menor resolución. ::
 
     gdaladdo -r average NOMBRE_DE_LA_IMAGEM.tif NIVELES
 
     Ejemplo:
     gdaladdo -r average of25cv33sd0f287119s1r080.tif 2 4 8 16 32 64
 
-#. Ahora podemos volver a visualizar el mapa recargardo la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.
+#. Ahora podemos volver a visualizar el mapa recargando la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.
 
-.. |logoOverview| image:: _images/mapaMosaicoOverview.png
-  :align: middle
-  :alt: mapa mosaico con overview
+		.. |logoOverview| image:: _images/mapaMosaicoOverview.png
+		  :align: middle
+		  :alt: mapa mosaico con overview
 
-+----------------+
-| |logoOverview| |
-+----------------+
+		+----------------+
+		| |logoOverview| |
+		+----------------+

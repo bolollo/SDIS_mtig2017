@@ -17,18 +17,18 @@ Bootstrap - Mapa Leaflet
 Bootstrap - Mapa Leaflet
 ========================
 
-Crearemos una página Web que contine un template básico de Bootstrap y un mapa de Leafelt  a pantalla completa.
+Crearemos una página Web que contiene un template básico de Bootstrap y un mapa de Leaflet  a pantalla completa.
 
 #. Crear una carpeta llamada *visor* dentro del directorio htdocs del Apache. ::
-   	
+
 		C:\ms4w\Apache\htdocs\visor
 
 #. Crear el archivo *movil.html* dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html con el template básico	de Bootstrap. Para ello escribir los siguiente: ::
-   
+
 		<!DOCTYPE html>
 		<html>
 			<head>
-				<title>visor reponsivo con Leaflet</title>
+				<title>visor responsivo con Leaflet</title>
 				<meta charset="utf-8">
 				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 			    <meta name="description" content="Demo project with jQuery">
@@ -87,24 +87,24 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 		</html>
 
 #. Abrir el navegador y ver que se muestra la barra de navegación de nuestra aplicación. Podemos ver que el texto *Hola mundo, Bootstrap!* queda debajo de la barra de navegación. ::
-   
+
 		http://localhost:81/visor/movil.html
 
-#. Cargar la librería de Leaflet. Debajo de donde cargarmos la librería de bootstrap, escribir lo siguiente: ::
-   
+#. Cargar la librería de Leaflet. Debajo de donde cargamos la librería de bootstrap, escribir lo siguiente: ::
+
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
-#. Cargar la hoja de estilo de Leaflet. Debajo de donde cargarmos la hoja de estilo css del bootstrap, escribir lo siguiente: ::
-   
+#. Cargar la hoja de estilo de Leaflet. Debajo de donde cargamos la hoja de estilo css del bootstrap, escribir lo siguiente: ::
+
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 
 #. Sustituir el elemento h1 que se encuentra dentro del contenedor por el elemento *div* que contendrá el mapa. Debemos copiar lo siguiente dentro del container: ::
-   
-   	<div id="mapid"></div>		
+
+   	<div id="mapid"></div>
 
 #. Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:
 		#. Justo al inicio del estilo::
-		   
+
 				html, body, #container {
 			  	height: 100%;
 			  	width: 100%;
@@ -112,7 +112,7 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 				}
 
 		#. Al final del estilo::
-		   
+
 		   	#mapid {
 					display: block;
 					width: auto;
@@ -120,7 +120,7 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 				}
 
 #. Crear el objeto mapa y cargar la capa de OpenStreetMap. Para ellos escribir lo siguiente en el apartado de javascript (script) al final de la página. ::
-   
+
 		var map = L.map('mapid').setView([41.68, 	1.85], 9);
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -128,7 +128,7 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 		}).addTo(map);
 
 #. Recargamos la página en el navegador y debemos ver el mapa. Podemos observar que el mapa tiene un espacio en blanco en la parte superior y en los lados.
-   
+
 		.. |logo_border| image:: _images/mapa_bordes.png
 	  	:align: middle
 	  	:alt: mapa con bordes
@@ -138,13 +138,13 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 		+---------------+
 
 #. Para eliminar estos espacios en blanco y tener el mapa a pantalla completa debemos modificar el estilo *body > .container-fluid*, para ellos escribir: ::
-   
+
    	body > .container-fluid {
 			padding: 50px 0 0 0;
 		}
 
 #. Ahora si recargamos la página veremos el mapa a pantalla completa.
-   
+
 		.. |logo_full_map| image:: _images/mapa_pantalla_completa.png
 	  	:align: middle
 	  	:alt: mapa pantalla completa
@@ -152,4 +152,3 @@ Crearemos una página Web que contine un template básico de Bootstrap y un mapa
 		+-----------------+
 		| |logo_full_map| |
 		+-----------------+
-

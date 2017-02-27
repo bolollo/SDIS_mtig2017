@@ -27,4 +27,4 @@ Una forma de mejorar el rendimiento del MapServer es colocar las proyecciones qu
 
 .. warning:: antes de realizar cualquier modificación en el archivo EPSG es mejor realizar una copia y guardar un respaldo.
 
-MapServer también permite configurar transformaciones personalizadas entre diferentes sistemas de referencia. Un ejemplo de esto lo pueden encontrar en http://www.icc.cat/Home-ICC/Geodesia/Recursos donde se explica como implementar la transformación de ED50 a ETRS89.
+MapServer también permite configurar transformaciones personalizadas entre diferentes sistemas de referencia. Un ejemplo de esto lo pueden encontrar en http://www.icc.cat/Home-ICC/Geodesia/Recursos donde se explica cómo implementar la transformación de ED50 a ETRS89.
