@@ -61,6 +61,6 @@ Luego comprobamos que el MapsServer se está ejecutando correctamente escribiend
 
     http://localhost/cgi-bin/mapserv.exe
 
-Debe aparece el siguente mensaje de MapServer: ::
+Debe aparece el siguiente mensaje de MapServer: ::
 
     No query information to decode. QUERY_STRING is set, but empty.

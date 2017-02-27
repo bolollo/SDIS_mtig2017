@@ -15,11 +15,11 @@ Conceptos básicos Servidor de Mapas
 	Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: http://creativecommons.org/licenses/by-sa/3.0/deed.es)
 
 Servidor de Mapas (WMS)
-========================
+=======================
 
 El estándar *Web Map Service* (WMS) creado por el *Open Geospatial Consortium* (OGC) define los elementos necesarios para un servicio de mapas.
 
-Un WMS renderiza datos tanto vectoriales como raster en diferentes estilos y proyecciones cartográficas y devuelve una imagen con información geográfica "mapa".
+Un WMS renderiza datos tanto vectoriales como ráster en diferentes estilos y proyecciones cartográficas y devuelve una imagen con información geográfica "mapa".
 
 Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionales: GetCapabilities *(obligatoria)*, GetMap *(obligatoria)*,  GetFeatureInfo *(opcional)*, DescribeLayer *(opcional)* y GetLegendGraphic *(opcional)*.
 
@@ -35,7 +35,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   *opcionales:*
 
-  * VERSION = 1.1.1 *(version del estándar WMS)*
+  * VERSION = 1.1.1 *(versión del estándar WMS)*
 
   * FORMATO = text/html
 
@@ -59,7 +59,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   * STYLES = si no hay estilo se puede dejar en blanco
 
-  * SRS ó CRS = 23031 *(código EPSG del sistéma de referencia)*
+  * SRS ó CRS = 23031 *(código EPSG del sistema de referencia)*
 
   * BBOX = minx,miny,maxx,maxy *(caja de coordenadas del mapa)*
 
@@ -92,13 +92,13 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 
   * SERVICE = WMS
 
-  * VERSION = 1.1.1 *(version del estándar WMS)*
+  * VERSION = 1.1.1 *(versión del estándar WMS)*
 
   * QUERY_LAYERS = nombre de la(s) capa(s)
 
   * STYLES = si no hay estilo se puede dejar en blanco
 
-  * SRS ó CRS = 23031 *(código EPSG del sistéma de referencia)*
+  * SRS ó CRS = 23031 *(código EPSG del sistema de referencia)*
 
   * BBOX = minx,miny,maxx,maxy *(caja de coordenadas del mapa)*
 
@@ -164,7 +164,7 @@ Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionale
 Software de servidores de mapas
 ###############################
 
-Existen múltiples programas que funcionana como servidores de mapa WMS, entre los principales está:
+Existen múltiples programas que funcionan como servidores de mapa WMS, entre los principales está:
 
 *Software libre*
 

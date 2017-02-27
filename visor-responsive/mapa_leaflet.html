@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Bootstrap - Mapa Leaflet &mdash; geotalleres-teoria 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/geotalleres.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
+    <link rel="up" title="Aplicación Web con diseño responsivo con Leaflet" href="index.html" />
+    <link rel="next" title="Bootstrap - Mapa Leaflet - Geolocalización" href="geolocalizacion_leaflet.html" />
+    <link rel="prev" title="Bootstrap - Template básico" href="template_basico_bootstrap.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GeoTalleres</a>
+        <span class="navbar-text navbar-version pull-left"><b>1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Nav <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html#servidor-de-mapas-wms">Servidor de Mapas (WMS)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geoserver/geoserver.html">GeoServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geoserver/geoserver.html#id1">GeoServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver/mapserver.html">MapServer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver/mapserver.html#id1">MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-install/mapserver_install.html">Instalación de MapServer (vía MS4W)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-install/mapserver_install.html#instalacion-mapserver">Instalación MapServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html">MapServer - Mapfile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile/mapserver_mapfile.html#id1">MapServer - Mapfile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-shp/mapserver_mapfile_shp.html">MapServer - Mapfile carga de shapefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-shp/mapserver_mapfile_shp.html#id1">MapServer - Mapfile carga de shapefile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-shp-clasificado/mapserver_mapfile_shp_clasificado.html">MapServer - Mapfile carga de shapefile con clasificación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-shp-clasificado/mapserver_mapfile_shp_clasificado.html#id1">MapServer - Mapfile carga de shapefile con clasificación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html">MapServer - Mapfile carga de raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html#id1">MapServer - Mapfile carga de raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html">MapServer - Mapfile carga de mosaico de imágenes raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Bootstrap - Mapa Leaflet</a><ul>
+<li><a class="reference internal" href="#id1">Bootstrap - Mapa Leaflet</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="template_basico_bootstrap.html" title="Previous Chapter: Bootstrap - Template básico"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Bootstrap - T...</span>
+    </a>
+  </li>
+  <li>
+    <a href="geolocalizacion_leaflet.html" title="Next Chapter: Bootstrap - Mapa Leaflet - Geolocalización"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Bootstrap - M... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/visor-responsive/mapa_leaflet.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="bootstrap-mapa-leaflet">
+<h1>Bootstrap - Mapa Leaflet<a class="headerlink" href="#bootstrap-mapa-leaflet" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fecha</th>
+<th class="head">Autores</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>14 Febrero 2017</td>
+<td><ul class="first last simple">
+<li>Wladimir Szczerban</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>©2017 Wladimir Szczerban</p>
+<p class="last">Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">http://creativecommons.org/licenses/by-sa/3.0/deed.es</a>)</p>
+</div>
+<div class="section" id="id1">
+<h2>Bootstrap - Mapa Leaflet<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Crearemos una página Web que contiene un template básico de Bootstrap y un mapa de Leaflet  a pantalla completa.</p>
+<ol class="arabic">
+<li><p class="first">Crear una carpeta llamada <em>visor</em> dentro del directorio htdocs del Apache.</p>
+<div class="highlight-python"><div class="highlight"><pre>C:\ms4w\Apache\htdocs\visor
+</pre></div>
+</div>
+</li>
+<li><p class="first">Crear el archivo <em>movil.html</em> dentro de la carpeta visor. En este archivo crearemos la estructura básica del nuestro html con el template básico     de Bootstrap. Para ello escribir los siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+        &lt;head&gt;
+                &lt;title&gt;visor responsivo con Leaflet&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+            &lt;meta name=&quot;description&quot; content=&quot;Demo project with jQuery&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot; crossorigin=&quot;anonymous&quot;&gt;
+                &lt;style type=&quot;text/css&quot;&gt;
+                        body &gt; .container-fluid {
+                                padding: 60px 15px 0;
+                        }
+                &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                &lt;!-- Fixed navbar --&gt;
+    &lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;navbar-header&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Nombre del proyecto&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;
+          &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;Acerca&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Desplegable &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Acción&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Otra acción&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Más acciones&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;dropdown-header&quot;&gt;Cabecera de navegación&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Enlace separado&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Otro enlace separado&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;!-- Begin page content --&gt;
+    &lt;div id=&quot;container&quot; class=&quot;container-fluid&quot;&gt;
+                        &lt;h1&gt;Hola mundo, Bootstrap!&lt;/h1&gt;
+    &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.min.js&quot; integrity=&quot;sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=&quot;
+  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot; integrity=&quot;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+        &lt;/script&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Abrir el navegador y ver que se muestra la barra de navegación de nuestra aplicación. Podemos ver que el texto <em>Hola mundo, Bootstrap!</em> queda debajo de la barra de navegación.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
+</pre></div>
+</div>
+</li>
+<li><p class="first">Cargar la librería de Leaflet. Debajo de donde cargamos la librería de bootstrap, escribir lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;script src=&quot;https://unpkg.com/leaflet@1.0.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Cargar la hoja de estilo de Leaflet. Debajo de donde cargamos la hoja de estilo css del bootstrap, escribir lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.0.3/dist/leaflet.css&quot; /&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Sustituir el elemento h1 que se encuentra dentro del contenedor por el elemento <em>div</em> que contendrá el mapa. Debemos copiar lo siguiente dentro del container:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;div id=&quot;mapid&quot;&gt;&lt;/div&gt;
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Agregar los estilos para obtener un mapa a pantalla completa. En el apartado de estilos (style) debemos lo siguiente:</dt>
+<dd><ol class="first last arabic">
+<li><p class="first">Justo al inicio del estilo:</p>
+<div class="highlight-python"><div class="highlight"><pre>html, body, #container {
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">Al final del estilo:</p>
+<div class="highlight-python"><div class="highlight"><pre>#mapid {
+                display: block;
+                width: auto;
+                height: 100%;
+        }
+</pre></div>
+</div>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Crear el objeto mapa y cargar la capa de OpenStreetMap. Para ellos escribir lo siguiente en el apartado de javascript (script) al final de la página.</p>
+<div class="highlight-python"><div class="highlight"><pre>var map = L.map(&#39;mapid&#39;).setView([41.68,        1.85], 9);
+
+L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
+  attribution: &#39;&amp;copy; &lt;a href=&quot;http://osm.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors&#39;
+}).addTo(map);
+</pre></div>
+</div>
+</li>
+<li><p class="first">Recargamos la página en el navegador y debemos ver el mapa. Podemos observar que el mapa tiene un espacio en blanco en la parte superior y en los lados.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">middle</td>
+</tr>
+<tr class="field-even field"><th class="field-name">alt:</th><td class="field-body">mapa con bordes</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="logo_border" src="../_images/mapa_bordes.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p class="first">Para eliminar estos espacios en blanco y tener el mapa a pantalla completa debemos modificar el estilo <em>body &gt; .container-fluid</em>, para ellos escribir:</p>
+<div class="highlight-python"><div class="highlight"><pre>body &gt; .container-fluid {
+                padding: 50px 0 0 0;
+        }
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ahora si recargamos la página veremos el mapa a pantalla completa.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">middle</td>
+</tr>
+<tr class="field-even field"><th class="field-name">alt:</th><td class="field-body">mapa pantalla completa</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="logo_full_map" src="../_images/mapa_pantalla_completa.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Varios.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

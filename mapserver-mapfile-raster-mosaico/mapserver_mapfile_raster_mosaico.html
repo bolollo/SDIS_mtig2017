@@ -30,6 +30,7 @@
     <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
+    <link rel="next" title="Cliente Web" href="../cliente-web/cliente_web.html" />
     <link rel="prev" title="MapServer - Mapfile carga de raster" href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -69,7 +70,6 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
@@ -108,6 +108,33 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visor-responsive/index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -135,6 +162,10 @@
                 
   <li>
     <a href="../mapserver-mapfile-raster/mapserver_mapfile_raster.html" title="Previous Chapter: MapServer - Mapfile carga de raster"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; MapServer - M...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../cliente-web/cliente_web.html" title="Next Chapter: Cliente Web"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Cliente Web &raquo;</span>
     </a>
   </li>
               
@@ -196,7 +227,7 @@
 </div>
 <div class="section" id="id1">
 <h2>MapServer - Mapfile carga de mosaico de imágenes raster<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Configuración de un archivo Mapfile (.map) para cargar un mosaico de imagenes en formato GeoTIFF (.tif).</p>
+<p>Configuración de un archivo Mapfile (.map) para cargar un mosaico de imágenes en formato GeoTIFF (.tif).</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Los todos los datos utilizados en este ejemplo son datos de ejemplo y no tienen ningún carácter oficial. Igualmente los datos pueden proceder de fuentes diferentes a las indicadas en la configuración del servicio y ser datos no reales.</p>
@@ -210,10 +241,10 @@
 <li><p class="first">Crear el archivo <em>mosaico.map</em> dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).</p>
 </li>
 <li><p class="first">Crear el objeto MAP.</p>
-<div class="highlight-python"><div class="highlight"><pre># Inicio arxivo MAP
+<div class="highlight-python"><div class="highlight"><pre># Inicio archivo MAP
 MAP
 
-#Nombre de la aplicación no debe contener espacios ni carácteres especiales
+#Nombre de la aplicación no debe contener espacios ni caracteres especiales
 NAME mosaico
 
 #Estado
@@ -228,7 +259,7 @@ UNITS METERS
 #Tamaño máximo de la imagen
 MAXSIZE 4096
 
-#Ruta de la cartografia
+#Ruta de la cartografía
 SHAPEPATH &quot;datos&quot;
 
 #Color de fondo
@@ -254,13 +285,13 @@ PROJECTION
 &quot;init=epsg:25831&quot;
 END
 
-#Definició de las capacidades
+#Definición de las capacidades
 WEB
  IMAGEPATH &quot;tmp/&quot;
  IMAGEURL &quot;tmp/&quot;
  METADATA
     OWS_TITLE &quot;Aplicación OGC&quot;
-    OWS_ABSTRACT &quot;Ejemplo de interoperabilidad utilitzando Minnesota MapServer&quot;
+    OWS_ABSTRACT &quot;Ejemplo de interoperabilidad utilizando Minnesota MapServer&quot;
     OWS_ENABLE_REQUEST &quot;*&quot;
     OWS_ONLINERESOURCE &quot;http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map&quot;
     OWS_SRS &quot;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&quot;
@@ -295,11 +326,11 @@ WEB
   END
 END
 
-#definicion de la leyenda del mapa
+#definición de la leyenda del mapa
 
-#definicion de las capas del mapa
+#definición de las capas del mapa
 
-#Final arxiu MAP
+#Final archivo MAP
 END
 </pre></div>
 </div>
@@ -309,26 +340,26 @@ END
 </pre></div>
 </div>
 </li>
-<li><p class="first">Comprobar que retorna el siguente mensaje:</p>
+<li><p class="first">Comprobar que retorna el siguiente mensaje:</p>
 <div class="highlight-python"><div class="highlight"><pre>mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 </pre></div>
 </div>
 </li>
-<li><p class="first">Crear la carperta <em>datos</em> dentro del directorio del proyecto</p>
+<li><p class="first">Crear la carpeta <em>datos</em> dentro del directorio del proyecto</p>
 </li>
 <li><p class="first">Copiar los archivos GeoTIFF dentro de la carpeta <em>datos</em></p>
 </li>
-<li><p class="first">Generar el shapefile que contiene el indice de las imágenes raster.:</p>
+<li><p class="first">Generar el shapefile que contiene el índice de las imágenes raster.</p>
 <div class="highlight-python"><div class="highlight"><pre>gdaltindex mosaico.shp *.tif
 </pre></div>
 </div>
 </li>
-<li><p class="first">Generar el índice espacial basado en quadtree para un conjunto de datos shapefile.:</p>
+<li><p class="first">Generar el índice espacial basado en quadtree para un conjunto de datos shapefile.</p>
 <div class="highlight-python"><div class="highlight"><pre>shptree mosaico.shp
 </pre></div>
 </div>
 </li>
-<li><p class="first">Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice <em>#definicion de las capas del mapa</em> agregamos lo siguiente.</p>
+<li><p class="first">Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice <em>#definición de las capas del mapa</em> agregamos lo siguiente.</p>
 <div class="highlight-python"><div class="highlight"><pre>#GeoTifF con cabecera y world file
 LAYER
   NAME &quot;ortos&quot;
@@ -357,15 +388,14 @@ END
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
+<li><p class="first">Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
 <div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/mosaico.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=orto&amp;FORMAT=image/png&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&amp;WIDTH=768&amp;HEIGHT=768
 </pre></div>
 </div>
 </li>
 <li><p class="first">Debemos ver como respuesta nuestro mapa</p>
-</li>
-</ol>
-<table border="1" class="docutils">
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
@@ -374,8 +404,9 @@ END
 </tr>
 </tbody>
 </table>
-<ol class="arabic">
-<li><p class="first">Para mejorar el rendimiento del WMS debemos generar los <em>overview</em> de las imágenes. Esto sirve para generar imágenes de vista general de menor resolución.:</p>
+</div></blockquote>
+</li>
+<li><p class="first">Para mejorar el rendimiento del WMS debemos generar los <em>overview</em> de las imágenes. Esto sirve para generar imágenes de vista general de menor resolución.</p>
 <div class="highlight-python"><div class="highlight"><pre>gdaladdo -r average NOMBRE_DE_LA_IMAGEM.tif NIVELES
 
 Ejemplo:
@@ -383,10 +414,9 @@ gdaladdo -r average of25cv33sd0f287119s1r080.tif 2 4 8 16 32 64
 </pre></div>
 </div>
 </li>
-<li><p class="first">Ahora podemos volver a visualizar el mapa recargardo la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.</p>
-</li>
-</ol>
-<table border="1" class="docutils">
+<li><p class="first">Ahora podemos volver a visualizar el mapa recargando la página con nuestra petición getMap. Debemos ver como respuesta nuestro mapa pero con una mejor resolución.</p>
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
@@ -395,6 +425,9 @@ gdaladdo -r average of25cv33sd0f287119s1r080.tif 2 4 8 16 32 64
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+</li>
+</ol>
 </div>
 </div>
 

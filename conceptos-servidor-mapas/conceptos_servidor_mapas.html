@@ -70,7 +70,6 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Conceptos básicos Servidor de Mapas</a><ul>
@@ -107,6 +106,33 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html">MapServer - Mapfile carga de mosaico de imágenes raster</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visor-responsive/index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +231,7 @@
 <div class="section" id="servidor-de-mapas-wms">
 <h2>Servidor de Mapas (WMS)<a class="headerlink" href="#servidor-de-mapas-wms" title="Permalink to this headline">¶</a></h2>
 <p>El estándar <em>Web Map Service</em> (WMS) creado por el <em>Open Geospatial Consortium</em> (OGC) define los elementos necesarios para un servicio de mapas.</p>
-<p>Un WMS renderiza datos tanto vectoriales como raster en diferentes estilos y proyecciones cartográficas y devuelve una imagen con información geográfica &#8220;mapa&#8221;.</p>
+<p>Un WMS renderiza datos tanto vectoriales como ráster en diferentes estilos y proyecciones cartográficas y devuelve una imagen con información geográfica &#8220;mapa&#8221;.</p>
 <p>Un WMS está compuesto por 2 operaciones o interfaces obligatorias y 3 opcionales: GetCapabilities <em>(obligatoria)</em>, GetMap <em>(obligatoria)</em>,  GetFeatureInfo <em>(opcional)</em>, DescribeLayer <em>(opcional)</em> y GetLegendGraphic <em>(opcional)</em>.</p>
 <ol class="arabic simple">
 <li><strong>GetCapabilities</strong>: nos permite descubrir cuáles son las capacidades del servidor. Como respuesta obtenemos un archivo en formato xml donde se puede saber cuáles son las versiones de WMS soportadas por el servidor, cuál es el sistema de referencia, las coordenadas, qué formato de imagen soporta y las capas de información que contiene.</li>
@@ -219,7 +245,7 @@
 </ul>
 <p><em>opcionales:</em></p>
 <ul class="simple">
-<li>VERSION = 1.1.1 <em>(version del estándar WMS)</em></li>
+<li>VERSION = 1.1.1 <em>(versión del estándar WMS)</em></li>
 <li>FORMATO = text/html</li>
 </ul>
 <p><strong>Ejemplo</strong></p>
@@ -237,7 +263,7 @@
 <li>VERSION = 1.1.1 <em>(version del estándar WMS)</em></li>
 <li>LAYERS = nombre de la(s) capa(s)</li>
 <li>STYLES = si no hay estilo se puede dejar en blanco</li>
-<li>SRS ó CRS = 23031 <em>(código EPSG del sistéma de referencia)</em></li>
+<li>SRS ó CRS = 23031 <em>(código EPSG del sistema de referencia)</em></li>
 <li>BBOX = minx,miny,maxx,maxy <em>(caja de coordenadas del mapa)</em></li>
 <li>WIDTH = número píxeles de ancho</li>
 <li>HEIGHT = número píxeles de altura</li>
@@ -261,10 +287,10 @@
 <ul class="simple">
 <li>REQUEST = GetFeatureInfo</li>
 <li>SERVICE = WMS</li>
-<li>VERSION = 1.1.1 <em>(version del estándar WMS)</em></li>
+<li>VERSION = 1.1.1 <em>(versión del estándar WMS)</em></li>
 <li>QUERY_LAYERS = nombre de la(s) capa(s)</li>
 <li>STYLES = si no hay estilo se puede dejar en blanco</li>
-<li>SRS ó CRS = 23031 <em>(código EPSG del sistéma de referencia)</em></li>
+<li>SRS ó CRS = 23031 <em>(código EPSG del sistema de referencia)</em></li>
 <li>BBOX = minx,miny,maxx,maxy <em>(caja de coordenadas del mapa)</em></li>
 <li>WIDTH = número píxeles de ancho</li>
 <li>HEIGHT = número píxeles de altura</li>
@@ -315,7 +341,7 @@
 </div></blockquote>
 <div class="section" id="software-de-servidores-de-mapas">
 <h3>Software de servidores de mapas<a class="headerlink" href="#software-de-servidores-de-mapas" title="Permalink to this headline">¶</a></h3>
-<p>Existen múltiples programas que funcionana como servidores de mapa WMS, entre los principales está:</p>
+<p>Existen múltiples programas que funcionan como servidores de mapa WMS, entre los principales está:</p>
 <p><em>Software libre</em></p>
 <ul class="simple">
 <li>GeoServer</li>

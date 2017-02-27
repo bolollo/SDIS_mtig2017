@@ -70,7 +70,6 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
@@ -109,6 +108,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visor-responsive/index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -124,7 +150,7 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">MapServer</a><ul>
 <li><a class="reference internal" href="#id1">MapServer</a><ul>
-<li><a class="reference internal" href="#principales-carateristicas">Principales caraterísticas</a></li>
+<li><a class="reference internal" href="#principales-caracteristicas">Principales características</a></li>
 </ul>
 </li>
 </ul>
@@ -204,19 +230,19 @@
 </div>
 <div class="section" id="id1">
 <h2>MapServer<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fué desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como <em>Minnesota MapServer</em> para diferenciarlo del producto comercial &#8220;map server&#8221; de Autodesk. Implementa las especificaciones Web Map Service (WMS) <em>(cliente/servidor)</em>, Web Feature Service no-transaccional (WFS) <em>(cliente/servidor)</em>, Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).</p>
+<p>Es un servidor de código abierto programado en C/C++, permite compartir y editar datos geoespaciales. Originalmente fue desarrollado por la Universidad de Minnesota (UMN) y por eso también se le conoce como <em>Minnesota MapServer</em> para diferenciarlo del producto comercial &#8220;map server&#8221; de Autodesk. Implementa las especificaciones Web Map Service (WMS) <em>(cliente/servidor)</em>, Web Feature Service no-transaccional (WFS) <em>(cliente/servidor)</em>, Web Map Context (WMC), Web Coverage Service(WCS), Filter Encoding, Styled Layer Descriptor (SLD), Geography Markup Language (GML), Sensor Observation Service (SOS), Observations and Measurements (OM).</p>
 <p><a class="reference external" href="http://www.mapserver.org/">http://www.mapserver.org/</a></p>
-<div class="section" id="principales-carateristicas">
-<h3>Principales caraterísticas<a class="headerlink" href="#principales-carateristicas" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="principales-caracteristicas">
+<h3>Principales características<a class="headerlink" href="#principales-caracteristicas" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Proporciona una API (MapScript) que permite acceder a las funcionalidades de MapServer desde diferentes lenguajes de programación como PHP, Java, Python, Perl, Ruby y .NET (C#).</li>
-<li>Soporta mútiples formatos de entrada (véctorial/raster) y salida ya que usa GDAL/OGR.</li>
+<li>Soporta múltiples formatos de entrada (vectorial/ráster) y salida ya que usa GDAL/OGR.</li>
 <li>Soporta fuentes TrueType (útil para el etiquetado de elementos).</li>
 <li>Configuración &#8220;al vuelo&#8221; vía parámetros GET pasados por URL.</li>
 <li>Configuración basada en el fichero mapfile <em>.map</em>.</li>
-<li>Incluye la posibilidad de usar una plantilla HTML MapServer para genererar una página web.</li>
+<li>Incluye la posibilidad de usar una plantilla HTML MapServer para generar una página web.</li>
 <li>Es multiplataforma</li>
-<li>Incluye un componente de cacheado <em>MapCache</em> para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimiar la respuesta a la hora de servir mapas. Soporta el estándar WMTS, también soporta otras salidas como TMS, VirtualEarth/Bing y peticiones Google Maps.</li>
+<li>Incluye un componente de cacheado <em>MapCache</em> para generar pirámides de teselas (tiles) con la finalidad de acelerar y optimizar la respuesta a la hora de servir mapas. Soporta el estándar WMTS, también soporta otras salidas como TMS, VirtualEarth/Bing y peticiones Google Maps.</li>
 <li>Incluye un componente <em>TinyOWS</em> que da soporte para edición de datos a través del protocolo WFS transactional (WFS-T).</li>
 </ul>
 </div>

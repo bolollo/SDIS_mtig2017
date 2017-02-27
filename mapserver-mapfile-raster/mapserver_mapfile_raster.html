@@ -70,7 +70,6 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
@@ -107,6 +106,33 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html">MapServer - Mapfile carga de mosaico de imágenes raster</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visor-responsive/index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
 </ul>
 </li>
 </ul>
@@ -215,10 +241,10 @@
 <li><p class="first">Crear el archivo <em>orto.map</em> dentro de la carpeta del proyecto. Abrir el archivo con un editor de texto (Notepad++, Atom, Sublime, etc).</p>
 </li>
 <li><p class="first">Crear el objeto MAP.</p>
-<div class="highlight-python"><div class="highlight"><pre># Inicio arxivo MAP
+<div class="highlight-python"><div class="highlight"><pre># Inicio archivo MAP
 MAP
 
-#Nombre de la aplicación no debe contener espacios ni carácteres especiales
+#Nombre de la aplicación no debe contener espacios ni caracteres especiales
 NAME ortofoto
 
 #Estado
@@ -233,7 +259,7 @@ UNITS METERS
 #Tamaño máximo de la imagen
 MAXSIZE 4096
 
-#Ruta de la cartografia
+#Ruta de la cartografía
 SHAPEPATH &quot;datos&quot;
 
 #Color de fondo
@@ -265,7 +291,7 @@ WEB
  IMAGEURL &quot;tmp/&quot;
  METADATA
     OWS_TITLE &quot;Aplicación OGC&quot;
-    OWS_ABSTRACT &quot;Ejemplo de interoperabilidad utilitzando Minnesota MapServer&quot;
+    OWS_ABSTRACT &quot;Ejemplo de interoperabilidad utilizando Minnesota MapServer&quot;
     OWS_ENABLE_REQUEST &quot;*&quot;
     OWS_ONLINERESOURCE &quot;http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map&quot;
     OWS_SRS &quot;EPSG:23031 EPSG:4326 EPSG:25831 EPSG:4258 EPSG:4230 EPSG:3857 EPSG:32631&quot;
@@ -300,11 +326,11 @@ WEB
   END
 END
 
-#definicion de la leyenda del mapa
+#definición de la leyenda del mapa
 
-#definicion de las capas del mapa
+#definición de las capas del mapa
 
-#Final arxiu MAP
+#Final archivo MAP
 END
 </pre></div>
 </div>
@@ -314,7 +340,7 @@ END
 </pre></div>
 </div>
 </li>
-<li><p class="first">Comprobar que retorna el siguente mensaje:</p>
+<li><p class="first">Comprobar que retorna el siguiente mensaje:</p>
 <div class="highlight-python"><div class="highlight"><pre>mapserv(): Web application error. Traditional BROWSE mode requires a TEMPLATE in the WEB section, but none was provided.
 </pre></div>
 </div>
@@ -322,9 +348,9 @@ END
 <li><p class="first">Definir la capa del mapa.</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Crear la carperta <em>datos</em> dentro del directorio del proyecto</li>
+<li>Crear la carpeta <em>datos</em> dentro del directorio del proyecto</li>
 <li>Copiar el archivo GeoTIFF (of25cv33sd0f287119s1r080.tif) en el directorio de datos</li>
-<li>Escribir la definicioń de la capa en el Mapfile. Justo debajo de donde dice <em>#definicion de las capas del mapa</em> agregamos lo siguiente.</li>
+<li>Escribir la definición de la capa en el Mapfile. Justo debajo de donde dice <em>#definición de las capas del mapa</em> agregamos lo siguiente.</li>
 </ol>
 <blockquote>
 <div><p>#Definición de la capa ortos
@@ -337,7 +363,7 @@ DATA &#8220;of25cv33sd0f287119s1r080.tif&#8221;
 PROJECTION
 &#8220;init=epsg:25831&#8221;
 END
-#Descripció de la capa
+#Descripción de la capa
 METADATA</p>
 <blockquote>
 <div><p>OWS_TITLE &#8220;ortofotos&#8221;
@@ -362,7 +388,7 @@ OWS_EXTENT &#8220;263747.60 4484436.53  527495.20 4748184.13&#8221;</p>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">Hacer la petión getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
+<li><p class="first">Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
 <div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/orto.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=orto&amp;FORMAT=image/png&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=421033.8106,4593021.8437,427571.7202,4598961.9813&amp;WIDTH=768&amp;HEIGHT=768
 </pre></div>
 </div>

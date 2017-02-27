@@ -70,7 +70,6 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#referencias">Referencias</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-servidor-mapas/conceptos_servidor_mapas.html">Conceptos básicos Servidor de Mapas</a><ul>
@@ -107,6 +106,33 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html">MapServer - Mapfile carga de mosaico de imágenes raster</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html">Leaflet - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wms/leaflet_wms.html#id1">Leaflet - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html">Leaflet - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../leaflet-wmts/leaflet_wmts.html#id1">Leaflet - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wms/qgis_wms.html">QGIS - Visualizar una capa WMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wms/qgis_wms.html#id1">QGIS - Visualizar una capa WMS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html">QGIS - Visualizar una capa WMTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visor-responsive/index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/bootstrap.html">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
 </ul>
 </li>
 </ul>
@@ -207,8 +233,8 @@
 <p>El <em>Mapfile</em> (.map) es el corazón de MapServer, este archivo define las relaciones entre los objetos, la localización de los datos y define cómo debe ser dibujada la cartografía. Para entender el funcionamiento de MapServer hay que tener claro que una capa (LAYER) es la combinación de datos más estilos. A los datos se les da estilos usando directivas CLASS y STYLE, tanto en la forma de atributo como la geometría.</p>
 <p>A la hora de crear el archivo map se han de tener en cuenta los siguientes aspectos:</p>
 <ul class="simple">
-<li>MapServer <strong>NO</strong> distigue entre mayúsculas y minúsculas.</li>
-<li>El Mapfile se lee de arriba a abajo por MapServer; esto significa que las capas situadas cerca de la parte superior del Mapfile serán dibujadas antes de aquellas cerca del final del archivo. Por lo tanto, los usuarios normalmente colocan imágenes de fondo y otros tipos de capas de fondo cerca de la parte superior de su mapfile, y líneas y puntos cerca de la parte inferior de su mapfile.</li>
+<li>MapServer <strong>NO</strong> distingue entre mayúsculas y minúsculas.</li>
+<li>El Mapfile se lee de arriba a abajo por MapServer; esto significa que las capas situadas cerca de la parte superior del Mapfile serán dibujadas antes de aquellas cerca del final del archivo. Por lo tanto, los usuarios normalmente colocan imágenes de fondo y otros tipos de capas de fondo cerca de la parte superior de su Mapfile, y líneas y puntos cerca de la parte inferior de su Mapfile.</li>
 <li>Las cadenas que contienen caracteres no alfanuméricos o una palabra clave de MapServer deben ir entre comillas. Se recomienda poner TODAS las cadenas en comillas dobles.</li>
 <li>El Mapfile se espera que este codificado en UTF-8. Los archivos no UTF-8 tendrán que ser convertidos a UTF-8.</li>
 <li>Los comentarios deben ir precedidos por el carácter #.</li>
@@ -221,9 +247,9 @@
 </ul>
 <div class="section" id="principales-objetos-del-archivo-map">
 <h3>Principales objetos del archivo .map<a class="headerlink" href="#principales-objetos-del-archivo-map" title="Permalink to this headline">¶</a></h3>
-<p><strong>MAP:</strong> Es el objeto principal del mapfile y contiene a todos los objetos</p>
+<p><strong>MAP:</strong> Es el objeto principal del Mapfile y contiene a todos los objetos</p>
 <p><strong>NAME:</strong> Nombre del proyecto</p>
-<p><strong>STATUS:</strong> Indica el estado de visualización del proyecto. Sus valores pueden ser ON, DEFAULT o OFF, estos valores pueden ser cambiados en ejecución.</p>
+<p><strong>STATUS:</strong> Indica el estado de visualización del proyecto. Sus valores pueden ser ON, DEFAULT u OFF, estos valores pueden ser cambiados en ejecución.</p>
 <p><strong>SIZE:</strong> Tamaño del píxel del mapa.</p>
 <p><strong>EXTENT:</strong> Corresponde al BBOX del mapa.</p>
 <p><strong>UNITS:</strong> Unidades del mapa.</p>
@@ -244,8 +270,8 @@
 <p><strong>METADATA:</strong> Descripción de la capa.</p>
 <p><strong>LABELITEM:</strong> Nombre del campo para etiquetar.</p>
 <p><strong>DUMP:</strong> Sus valores pueden ser true o false y permiten exportar la capa al
-formato GML. <em>Nota</em>: desde la version 6.0 no se usa y se debe especificar en el METADATA de la capa.</p>
-<p><strong>CLASS:</strong> Este objeto se utiliza para crear temáticos o simplemente para dar color a las capas. Sus objeto más importantes son:</p>
+formato GML. <em>Nota</em>: desde la versión 6.0 no se usa y se debe especificar en el METADATA de la capa.</p>
+<p><strong>CLASS:</strong> Este objeto se utiliza para crear temáticos o simplemente para dar color a las capas. Sus objetos más importantes son:</p>
 <blockquote>
 <div><p><strong>NAME:</strong> Nombre de la clase.</p>
 <p><strong>EXPRESSION:</strong> Valor con el que se tematizará.</p>
@@ -263,7 +289,7 @@ formato GML. <em>Nota</em>: desde la version 6.0 no se usa y se debe especificar
 <blockquote>
 <div><p><strong>COLOR:</strong> Color usado para dibujar las geometrías.</p>
 <p><strong>OUTLINECOLOR:</strong> Color usado para dibujar el contorno.</p>
-<p><strong>SYMBOL:</strong> Simbolo usado para representar las geometrías</p>
+<p><strong>SYMBOL:</strong> Símbolo usado para representar las geometrías</p>
 </div></blockquote>
 </div></blockquote>
 </div></blockquote>
