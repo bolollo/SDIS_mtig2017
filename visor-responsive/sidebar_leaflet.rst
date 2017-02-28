@@ -112,15 +112,15 @@ Añadiremos a nuestro mapa un control que permite la creación de un menú later
 
 #. Abrir el navegador y ver que nos aparece un menú lateral en el mapa. ::
 
-		http://localhost:81/visor/movil.html
+	http://localhost:81/visor/movil.html
 
 
-	.. |logo_sidebar| image:: _images/mapa_sidebar.png
-			:align: middle
-			:alt: mapa con menú lateral
+.. |logo_sidebar| image:: _images/mapa_sidebar.png
+	:align: middle
+	:alt: mapa con menú lateral
 
-		+----------------+
-		| |logo_sidebar| |
-		+----------------+
++----------------+
+| |logo_sidebar| |
++----------------+
 
 .. [#] https://github.com/Turbo87/sidebar-v2
