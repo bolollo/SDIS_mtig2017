@@ -124,7 +124,7 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 
 		var map = L.map('mapid').setView([41.68, 	1.85], 9);
 
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 		  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 
@@ -153,3 +153,8 @@ Crearemos una página Web que contiene un template básico de Bootstrap y un map
 		+-----------------+
 		| |logo_full_map| |
 		+-----------------+
+
+Ejercicios
+##########
+
+#. Agregar 2 capas provenientes de servicios WMS.
