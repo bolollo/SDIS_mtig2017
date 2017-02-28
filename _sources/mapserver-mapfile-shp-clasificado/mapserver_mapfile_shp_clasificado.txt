@@ -200,7 +200,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 	::
 
-		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&request=getCapabilities&service=wms
+		http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map&request=getCapabilities&service=wms
 
 	.. note::
 
@@ -208,7 +208,7 @@ Configuración de un archivo Mapfile (.map) para cargar una capa en formato ESRI
 
 #. Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir: ::
 
-  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=pein&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
+  	http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map&REQUEST=GetMap&SERVICE=WMS&VERSION=1.1.1&LAYERS=administracio_publica&FORMAT=image/png&STYLES=&SRS=EPSG:25831&BBOX=263747.60,4484436.53,527495.20,4748184.13&WIDTH=768&HEIGHT=768
 
 #. Debemos ver como respuesta nuestro mapa con todos los equipamientos sin clasificación
 

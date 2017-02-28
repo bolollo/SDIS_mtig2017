@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; geotalleres-teoria 1 documentation</title>
+    <title>Bootstrap - Mapa Leaflet - Menú lateral &mdash; geotalleres-teoria 1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
     <link rel="up" title="Aplicación Web con diseño responsivo con Leaflet" href="index.html" />
-    <link rel="next" title="&lt;no title&gt;" href="control_capas.html" />
+    <link rel="next" title="Bootstrap - Mapa Leaflet - Control capas" href="control_capas.html" />
     <link rel="prev" title="Bootstrap - Mapa Leaflet - Geolocalización" href="geolocalizacion_leaflet.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -68,7 +68,7 @@
      href="../index.html">Nav <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html">Conceptos básicos de Geoservicios</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../conceptos-geoservicios/conceptos_geoservicios.html#geoservicio">Geoservicio</a></li>
 </ul>
@@ -109,6 +109,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../mapserver-mapfile-raster-mosaico/mapserver_mapfile_raster_mosaico.html#id1">MapServer - Mapfile carga de mosaico de imágenes raster</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html">Clientes de mapas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../clientes-mapas/clientes_mapas.html#id1">Clientes de mapas</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cliente-web/cliente_web.html">Cliente Web</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cliente-web/cliente_web.html#id1">Cliente Web</a></li>
 </ul>
@@ -129,11 +133,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../qgis-wmts/qgis_wmts.html#id1">QGIS - Visualizar una capa WMTS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Aplicación Web con diseño responsivo con Leaflet</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bootstrap.html">Bootstrap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_capas.html">Bootstrap - Mapa Leaflet - Control capas</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +154,11 @@
      href="#">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"
       role="menu"
-      aria-labelledby="dLabelLocalToc"><ul class="simple">
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Bootstrap - Mapa Leaflet - Menú lateral</a><ul>
+<li><a class="reference internal" href="#id1">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -162,7 +172,7 @@
     </a>
   </li>
   <li>
-    <a href="control_capas.html" title="Next Chapter: <no title>"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm"><no title> &raquo;</span>
+    <a href="control_capas.html" title="Next Chapter: Bootstrap - Mapa Leaflet - Control capas"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Bootstrap - M... &raquo;</span>
     </a>
   </li>
               
@@ -196,7 +206,155 @@
   <div class="row">
     <div class="col-md-12">
       
-  
+  <div class="section" id="bootstrap-mapa-leaflet-menu-lateral">
+<h1>Bootstrap - Mapa Leaflet - Menú lateral<a class="headerlink" href="#bootstrap-mapa-leaflet-menu-lateral" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Fecha</th>
+<th class="head">Autores</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>14 Febrero 2017</td>
+<td><ul class="first last simple">
+<li>Wladimir Szczerban</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>©2017 Wladimir Szczerban</p>
+<p class="last">Excepto donde quede reflejado de otra manera, la presente documentación se halla bajo licencia: Creative Commons (Creative Commons - Attribution - Share Alike: <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es">http://creativecommons.org/licenses/by-sa/3.0/deed.es</a>)</p>
+</div>
+<div class="section" id="id1">
+<h2>Bootstrap - Mapa Leaflet - Menú lateral<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Añadiremos a nuestro mapa un control que permite la creación de un menú lateral donde podremos poner información, para ello utilizaremos el plugin <em>Sidebar-v2</em> <a class="footnote-reference" href="#id3" id="id2">[1]</a>.</p>
+<ol class="arabic">
+<li><p class="first">Ir a la página Web de Sidebar-v2 y en el apartado de releases descargar la última versión <a class="reference external" href="https://github.com/Turbo87/sidebar-v2/releases">https://github.com/Turbo87/sidebar-v2/releases</a></p>
+</li>
+<li><p class="first">En la carpeta visor donde tenemos nuestro html debemos crear 2 carpetas; una llamada <em>css</em> y la otra <em>js</em>.</p>
+</li>
+<li><p class="first">Dentro de la carpeta css copiaremos el archivo <em>leaflet-sidebar.min.css</em> que se encuentra dentro del archivo descargado.</p>
+</li>
+<li><p class="first">Dentro de la carpeta js copiaremos el archivo <em>leaflet-sidebar.min.js</em> que se encuentra dentro del archivo descargado.</p>
+</li>
+<li><p class="first">Agregar la hoja de estilo. En el <em>head</em> de nuestra página agregar la hoja de estilo (css). La debemos agregar debajo de la hoja de estilo del Leaflet y antes de la definición de nuestro estilo. Para ello debemos escribir lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/leaflet-sidebar.min.css&quot; /&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Agregar la librería javascript del plugin. Al final de nuestra página debemos añadir la librería debajo de donde incluimos la librería de Leaflet y antes de nuestro código javascript. Para ellos escribimos lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;script src=&quot;js/leaflet-sidebar.min.js&quot;&gt;&lt;/script&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Modificar el estilo del sidebar para que se adapte a nuestra aplicación con Bootstrap. Para ello en el apartado de nuestro estilo agregaremos lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>.sidebar{
+        position: relative;
+        height: 100%;
+        left:0;
+        top:0;
+        border-bottom-width: 0 !important;
+        border-top-width: 0 !important;
+        border-left-width: 0 !important;
+}
+
+.sidebar-left{
+        float: left;
+}
+
+.sidebar-right{
+        float: right;
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">Incluimos el código html del contenido de la barra en nuestro aplicación. Para ello dentro del contenedor (container) justo antes de nuestro elemento de mapa escribimos lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>    &lt;div id=&quot;sidebar&quot; class=&quot;sidebar collapsed&quot;&gt;
+    &lt;!-- Nav tabs --&gt;
+    &lt;div class=&quot;sidebar-tabs&quot;&gt;
+        &lt;ul role=&quot;tablist&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#home&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#profile&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#messages&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://github.com/Turbo87/sidebar-v2&quot; role=&quot;tab&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul role=&quot;tablist&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#settings&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-gear&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Tab panes --&gt;
+    &lt;div class=&quot;sidebar-content&quot;&gt;
+        &lt;div class=&quot;sidebar-pane&quot; id=&quot;home&quot;&gt;
+            &lt;h1 class=&quot;sidebar-header&quot;&gt;
+                sidebar-v2
+                &lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/h1&gt;
+
+            &lt;p&gt;A responsive sidebar for mapping libraries like &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt; or &lt;a href=&quot;http://openlayers.org/&quot;&gt;OpenLayers&lt;/a&gt;.&lt;/p&gt;
+
+            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;sidebar-pane&quot; id=&quot;profile&quot;&gt;
+            &lt;h1 class=&quot;sidebar-header&quot;&gt;Profile&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;sidebar-pane&quot; id=&quot;messages&quot;&gt;
+            &lt;h1 class=&quot;sidebar-header&quot;&gt;Messages&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;sidebar-pane&quot; id=&quot;settings&quot;&gt;
+            &lt;h1 class=&quot;sidebar-header&quot;&gt;Settings&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Inicializar el plugin. En el apartado de javascript de nuestra página luego de la declaración del objeto mapa agregamos:</p>
+<div class="highlight-python"><div class="highlight"><pre>var sidebar = L.control.sidebar(&#39;sidebar&#39;).addTo(map);
+</pre></div>
+</div>
+</li>
+<li><p class="first">Abrir el navegador y ver que nos aparece un menú lateral en el mapa.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
+</pre></div>
+</div>
+</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="mapa con menú lateral" class="align-middle" src="../_images/mapa_sidebar.png" /></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="https://github.com/Turbo87/sidebar-v2">https://github.com/Turbo87/sidebar-v2</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
 
     </div>
       

@@ -138,6 +138,8 @@
 <li class="toctree-l2"><a class="reference internal" href="template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Bootstrap - Mapa Leaflet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sidebar_leaflet.html">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_capas.html">Bootstrap - Mapa Leaflet - Control capas</a></li>
 </ul>
 </li>
 </ul>
@@ -154,7 +156,10 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Bootstrap - Mapa Leaflet</a><ul>
-<li><a class="reference internal" href="#id1">Bootstrap - Mapa Leaflet</a></li>
+<li><a class="reference internal" href="#id1">Bootstrap - Mapa Leaflet</a><ul>
+<li><a class="reference internal" href="#ejercicios">Ejercicios</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -350,7 +355,7 @@
 <li><p class="first">Crear el objeto mapa y cargar la capa de OpenStreetMap. Para ellos escribir lo siguiente en el apartado de javascript (script) al final de la página.</p>
 <div class="highlight-python"><div class="highlight"><pre>var map = L.map(&#39;mapid&#39;).setView([41.68,        1.85], 9);
 
-L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
+var osm = L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
   attribution: &#39;&amp;copy; &lt;a href=&quot;http://osm.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors&#39;
 }).addTo(map);
 </pre></div>
@@ -390,6 +395,12 @@ L.tileLayer(&#39;http://{s}.tile.osm.org/{z}/{x}/{y}.png&#39;, {
 </div></blockquote>
 </li>
 </ol>
+<div class="section" id="ejercicios">
+<h3>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Agregar 2 capas provenientes de servicios WMS.</li>
+</ol>
+</div>
 </div>
 </div>
 

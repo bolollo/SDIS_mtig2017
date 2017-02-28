@@ -137,6 +137,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../visor-responsive/template_basico_bootstrap.html">Bootstrap - Template básico</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../visor-responsive/mapa_leaflet.html">Bootstrap - Mapa Leaflet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../visor-responsive/geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/sidebar_leaflet.html">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visor-responsive/control_capas.html">Bootstrap - Mapa Leaflet - Control capas</a></li>
 </ul>
 </li>
 </ul>
@@ -426,7 +428,7 @@ END
 </li>
 <li><p class="first">Verificar que funcione el getCapabilities. Abrir el navegador y escribir:</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&amp;request=getCapabilities&amp;service=wms
+<div><div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map&amp;request=getCapabilities&amp;service=wms
 </pre></div>
 </div>
 <div class="admonition note">
@@ -436,7 +438,7 @@ END
 </div></blockquote>
 </li>
 <li><p class="first">Hacer la petición getMap para visualizar el mapa. Abrir el navegador y escribir:</p>
-<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/pein.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=pein&amp;FORMAT=image/png&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=263747.60,4484436.53,527495.20,4748184.13&amp;WIDTH=768&amp;HEIGHT=768
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/cgi-bin/mapserv.exe?map=C:/Users/XXXX/mtig2017/equipamientos.map&amp;REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;LAYERS=administracio_publica&amp;FORMAT=image/png&amp;STYLES=&amp;SRS=EPSG:25831&amp;BBOX=263747.60,4484436.53,527495.20,4748184.13&amp;WIDTH=768&amp;HEIGHT=768
 </pre></div>
 </div>
 </li>
