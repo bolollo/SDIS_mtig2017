@@ -111,17 +111,19 @@ Añadiremos a nuestro mapa un control que permite la creación de un menú later
    
    		var sidebar = L.control.sidebar('sidebar').addTo(map);
 
-#. Abrir el navegador y ver que nos aparece un menú lateral en el mapa. ::
+#. Abrir el navegador. ::
 
 	http://localhost:81/visor/movil.html
 
 
-		.. |logo_sidebar| image:: _images/mapa_sidebar.png
-			:align: middle
-			:alt: mapa con menú lateral
+#. Ver que nos aparece un menú lateral en el mapa.
 
-		+----------------+
-		| |logo_sidebar| |
-		+----------------+
+	.. |logo_sidebar| image:: _images/mapa_sidebar.png
+		:align: middle
+		:alt: mapa con menú lateral
+
+	+----------------+
+	| |logo_sidebar| |
+	+----------------+
 
 .. [#] https://github.com/Turbo87/sidebar-v2
