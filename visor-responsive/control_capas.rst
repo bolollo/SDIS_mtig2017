@@ -56,6 +56,21 @@ A continuación, crearemos dos objetos en el apartado de javascript. Uno contend
 
 		http://localhost:81/visor/movil.html
 
+#. Agregar el control de capas a la barra lateral. Para ellos escribir lo siguiente justo despues de donde agregamos el control al mapa. ::
+   
+   	document.getElementById("control-capas").appendChild(
+    	controlCapas.getContainer()
+	);
+
+#. Modificar el estilo del control de capas. Al final del apartado de estilo de la página escribiri lo siguiente: :: 
+   
+   	.leaflet-control-layers{
+		width: 100%;
+	}
+
+	.leaflet-touch .leaflet-control-layers{
+		border: 0px;
+	}
 
 
 .. [#] http://leafletjs.com/reference-1.0.3.html#control-layers
