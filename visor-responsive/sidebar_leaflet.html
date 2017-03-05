@@ -140,6 +140,7 @@
 <li class="toctree-l2"><a class="reference internal" href="geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="control_capas.html">Bootstrap - Mapa Leaflet - Control capas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mostrar_leyenda.html">Bootstrap - Mapa Leaflet - Leyendas capas</a></li>
 </ul>
 </li>
 </ul>
@@ -276,52 +277,53 @@
 </div>
 </li>
 <li><p class="first">Incluimos el código html del contenido de la barra en nuestro aplicación. Para ello dentro del contenedor (container) justo antes de nuestro elemento de mapa escribimos lo siguiente:</p>
-<div class="highlight-python"><div class="highlight"><pre>    &lt;div id=&quot;sidebar&quot; class=&quot;sidebar collapsed&quot;&gt;
-    &lt;!-- Nav tabs --&gt;
-    &lt;div class=&quot;sidebar-tabs&quot;&gt;
-        &lt;ul role=&quot;tablist&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#home&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#profile&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#messages&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;https://github.com/Turbo87/sidebar-v2&quot; role=&quot;tab&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
+<div class="highlight-python"><div class="highlight"><pre>        &lt;div id=&quot;sidebar&quot; class=&quot;sidebar collapsed&quot;&gt;
+        &lt;!-- Nav tabs --&gt;
+        &lt;div class=&quot;sidebar-tabs&quot;&gt;
+            &lt;ul role=&quot;tablist&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#home&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#leyenda&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-photo&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#info&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;https://github.com/bolollo/SDIS_mtig2017&quot; role=&quot;tab&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
 
-        &lt;ul role=&quot;tablist&quot;&gt;
-            &lt;li&gt;&lt;a href=&quot;#settings&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-gear&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;!-- Tab panes --&gt;
-    &lt;div class=&quot;sidebar-content&quot;&gt;
-        &lt;div class=&quot;sidebar-pane&quot; id=&quot;home&quot;&gt;
-            &lt;h1 class=&quot;sidebar-header&quot;&gt;
-                sidebar-v2
-                &lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-            &lt;/h1&gt;
-
-            &lt;p&gt;A responsive sidebar for mapping libraries like &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt; or &lt;a href=&quot;http://openlayers.org/&quot;&gt;OpenLayers&lt;/a&gt;.&lt;/p&gt;
-
-            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-
-            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-
-            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-
-            &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;ul role=&quot;tablist&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#settings&quot; role=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-gear&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;sidebar-pane&quot; id=&quot;profile&quot;&gt;
-            &lt;h1 class=&quot;sidebar-header&quot;&gt;Profile&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
-        &lt;/div&gt;
+        &lt;!-- Tab panes --&gt;
+        &lt;div class=&quot;sidebar-content&quot;&gt;
+            &lt;div class=&quot;sidebar-pane&quot; id=&quot;home&quot;&gt;
+                &lt;h1 class=&quot;sidebar-header&quot;&gt;Capas&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+                &lt;div class=&quot;&quot; id=&quot;control-capas&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
 
-        &lt;div class=&quot;sidebar-pane&quot; id=&quot;messages&quot;&gt;
-            &lt;h1 class=&quot;sidebar-header&quot;&gt;Messages&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
-        &lt;/div&gt;
+            &lt;div class=&quot;sidebar-pane&quot; id=&quot;leyenda&quot;&gt;
+                &lt;h1 class=&quot;sidebar-header&quot;&gt;Leyenda&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+                &lt;div class=&quot;&quot; id=&quot;control-leyenda&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
 
-        &lt;div class=&quot;sidebar-pane&quot; id=&quot;settings&quot;&gt;
-            &lt;h1 class=&quot;sidebar-header&quot;&gt;Settings&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+            &lt;div class=&quot;sidebar-pane&quot; id=&quot;info&quot;&gt;
+                &lt;h1 class=&quot;sidebar-header&quot;&gt;Info&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+
+                &lt;p&gt;A responsive sidebar for mapping libraries like &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt; or &lt;a href=&quot;http://openlayers.org/&quot;&gt;OpenLayers&lt;/a&gt;.&lt;/p&gt;
+
+                &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+                &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+                &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+
+                &lt;p class=&quot;lorem&quot;&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;sidebar-pane&quot; id=&quot;settings&quot;&gt;
+                &lt;h1 class=&quot;sidebar-header&quot;&gt;Ajustes&lt;span class=&quot;sidebar-close&quot;&gt;&lt;i class=&quot;fa fa-caret-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
 &lt;/div&gt;
 </pre></div>
 </div>
@@ -331,13 +333,14 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Abrir el navegador y ver que nos aparece un menú lateral en el mapa.</p>
+<li><p class="first">Abrir el navegador.</p>
 <div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
 </pre></div>
 </div>
 </li>
-</ol>
-<table border="1" class="docutils">
+<li><p class="first">Ver que nos aparece un menú lateral en el mapa.</p>
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="100%" />
 </colgroup>
@@ -346,6 +349,9 @@
 </tr>
 </tbody>
 </table>
+</div></blockquote>
+</li>
+</ol>
 <table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">

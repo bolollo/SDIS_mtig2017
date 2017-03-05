@@ -31,7 +31,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="geotalleres-teoria 1 documentation" href="../index.html" />
     <link rel="up" title="Aplicación Web con diseño responsivo con Leaflet" href="index.html" />
-    <link rel="next" title="&lt;no title&gt;" href="mostrar_leyenda.html" />
+    <link rel="next" title="Bootstrap - Mapa Leaflet - Leyendas capas" href="mostrar_leyenda.html" />
     <link rel="prev" title="Bootstrap - Mapa Leaflet - Menú lateral" href="sidebar_leaflet.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -140,6 +140,7 @@
 <li class="toctree-l2"><a class="reference internal" href="geolocalizacion_leaflet.html">Bootstrap - Mapa Leaflet - Geolocalización</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar_leaflet.html">Bootstrap - Mapa Leaflet - Menú lateral</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Bootstrap - Mapa Leaflet - Control capas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mostrar_leyenda.html">Bootstrap - Mapa Leaflet - Leyendas capas</a></li>
 </ul>
 </li>
 </ul>
@@ -172,7 +173,7 @@
     </a>
   </li>
   <li>
-    <a href="mostrar_leyenda.html" title="Next Chapter: <no title>"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm"><no title> &raquo;</span>
+    <a href="mostrar_leyenda.html" title="Next Chapter: Bootstrap - Mapa Leaflet - Leyendas capas"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Bootstrap - M... &raquo;</span>
     </a>
   </li>
               
@@ -234,7 +235,7 @@
 </div>
 <div class="section" id="id1">
 <h2>Bootstrap - Mapa Leaflet - Control capas<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Añadiremos a nuestro mapa un control de capas permite a los usuarios cambiar entre distintas capas de base y activar/desactivar las superposiciones. Para ellos utilizaremos el <em>Control.Layers</em> <a class="footnote-reference" href="#id3" id="id2">[1]</a> de Leaflet.</p>
+<p>Añadiremos a nuestro mapa un control de capas que permita a los usuarios cambiar entre distintas capas de base y activar/desactivar las superposiciones. Para ellos utilizaremos el <em>Control.Layers</em> <a class="footnote-reference" href="#id3" id="id2">[1]</a> de Leaflet.</p>
 <p>Hay dos tipos de capas: (1) capas base que son mutuamente excluyentes (sólo una puede ser visible a la vez en el mapa), p. Capas de teselas y (2) superposiciones, que son todas las otras cosas que se ponen sobre las capas de base.</p>
 <p>Ejemplo de uso.</p>
 <div class="highlight-python"><div class="highlight"><pre>var baseLayers = {
@@ -274,6 +275,42 @@ L.control.layers(baseLayers, overlays).addTo(map);
 <div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
 </pre></div>
 </div>
+</li>
+<li><p class="first">Agregar el control de capas a la barra lateral. Para ellos escribir lo siguiente justo despues de donde agregamos el control al mapa.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;control-capas&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span>
+<span class="n">controlCapas</span><span class="o">.</span><span class="n">getContainer</span><span class="p">()</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Modificar el estilo del control de capas. Al final del apartado de estilo de la página escribiri lo siguiente:</p>
+<div class="highlight-python"><div class="highlight"><pre>.leaflet-control-layers{
+        width: 100%;
+}
+
+.leaflet-touch .leaflet-control-layers{
+        border: 0px;
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">Abrir el navegador.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:81/visor/movil.html
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ver que nos aparece el control de capas en el menú lateral.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="mapa con control de capas en menú lateral" class="align-middle" src="../_images/mapa_control_capas.png" /></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
 </li>
 </ol>
 <table class="docutils footnote" frame="void" id="id3" rules="none">

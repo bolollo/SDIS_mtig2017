@@ -59,13 +59,13 @@ Añadiremos a nuestro mapa un control que permite la creación de un menú later
 #. Incluimos el código html del contenido de la barra en nuestro aplicación. Para ello dentro del contenedor (container) justo antes de nuestro elemento de mapa escribimos lo siguiente: ::
    
 	   	<div id="sidebar" class="sidebar collapsed">
-	    	<!-- Nav tabs -->
+    		<!-- Nav tabs -->
 	        <div class="sidebar-tabs">
 	            <ul role="tablist">
 	                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-	                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
-	                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
-	                <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
+	                <li><a href="#leyenda" role="tab"><i class="fa fa-photo"></i></a></li>
+	                <li><a href="#info" role="tab"><i class="fa fa-info-circle"></i></a></li>
+	                <li><a href="https://github.com/bolollo/SDIS_mtig2017" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
 	            </ul>
 
 	            <ul role="tablist">
@@ -76,10 +76,19 @@ Añadiremos a nuestro mapa un control que permite la creación de un menú later
 	        <!-- Tab panes -->
 	        <div class="sidebar-content">
 	            <div class="sidebar-pane" id="home">
-	                <h1 class="sidebar-header">
-	                    sidebar-v2
-	                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-	                </h1>
+	                <h1 class="sidebar-header">Capas<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+	                <div class="" id="control-capas">
+	                </div>
+	            </div>
+
+	            <div class="sidebar-pane" id="leyenda">
+	                <h1 class="sidebar-header">Leyenda<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+	                <div class="" id="control-leyenda">
+	                </div>
+	            </div>
+
+	            <div class="sidebar-pane" id="info">
+	                <h1 class="sidebar-header">Info<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
 
 	                <p>A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
 
@@ -92,35 +101,29 @@ Añadiremos a nuestro mapa un control que permite la creación de un menú later
 	                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 	            </div>
 
-	            <div class="sidebar-pane" id="profile">
-	                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-	            </div>
-
-	            <div class="sidebar-pane" id="messages">
-	                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-	            </div>
-
 	            <div class="sidebar-pane" id="settings">
-	                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+	                <h1 class="sidebar-header">Ajustes<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
 	            </div>
 	        </div>
-	    </div> 	 			
+    	</div> 	 			
 
 #. Inicializar el plugin. En el apartado de javascript de nuestra página luego de la declaración del objeto mapa agregamos: ::
    
    		var sidebar = L.control.sidebar('sidebar').addTo(map);
 
-#. Abrir el navegador y ver que nos aparece un menú lateral en el mapa. ::
+#. Abrir el navegador. ::
 
 	http://localhost:81/visor/movil.html
 
 
-.. |logo_sidebar| image:: _images/mapa_sidebar.png
-	:align: middle
-	:alt: mapa con menú lateral
+#. Ver que nos aparece un menú lateral en el mapa.
 
-+----------------+
-| |logo_sidebar| |
-+----------------+
+	.. |logo_sidebar| image:: _images/mapa_sidebar.png
+		:align: middle
+		:alt: mapa con menú lateral
+
+	+----------------+
+	| |logo_sidebar| |
+	+----------------+
 
 .. [#] https://github.com/Turbo87/sidebar-v2
