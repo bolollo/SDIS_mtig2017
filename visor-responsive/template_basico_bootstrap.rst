@@ -102,10 +102,10 @@ Crearemos una página Web que contiene un template básico de Bootstrap. Esta p�
 
 #. Ahora si recargamos la página veremos que el contenido aparece correctamente.
 
-	.. |logo_template| image:: _images/template_basico.png
-	  :align: middle
-	  :alt: template básico de Bootstrap
+		.. |logo_template| image:: _images/template_basico.png
+		  :align: middle
+		  :alt: template básico de Bootstrap
 
-	+-----------------+
-	| |logo_template| |
-	+-----------------+
+		+-----------------+
+		| |logo_template| |
+		+-----------------+

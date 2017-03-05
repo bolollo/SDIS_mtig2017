@@ -17,7 +17,7 @@ Bootstrap - Mapa Leaflet - Control capas
 Bootstrap - Mapa Leaflet - Control capas
 ========================================
 
-Añadiremos a nuestro mapa un control de capas permite a los usuarios cambiar entre distintas capas de base y activar/desactivar las superposiciones. Para ellos utilizaremos el *Control.Layers* [#]_ de Leaflet.
+Añadiremos a nuestro mapa un control de capas que permita a los usuarios cambiar entre distintas capas de base y activar/desactivar las superposiciones. Para ellos utilizaremos el *Control.Layers* [#]_ de Leaflet.
 
 Hay dos tipos de capas: (1) capas base que son mutuamente excluyentes (sólo una puede ser visible a la vez en el mapa), p. Capas de teselas y (2) superposiciones, que son todas las otras cosas que se ponen sobre las capas de base.
 
@@ -72,5 +72,17 @@ A continuación, crearemos dos objetos en el apartado de javascript. Uno contend
 		border: 0px;
 	}
 
+#. Abrir el navegador y ver que nos aparece el control de capas en el menú lateral. ::
+
+	http://localhost:81/visor/movil.html
+
+
+		.. |logo_control_capas| image:: _images/mapa_control_capas.png
+			:align: middle
+			:alt: mapa con control de capas en menú lateral
+
+		+----------------------+
+		| |logo_control_capas| |
+		+----------------------+
 
 .. [#] http://leafletjs.com/reference-1.0.3.html#control-layers
