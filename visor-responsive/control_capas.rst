@@ -72,17 +72,18 @@ A continuación, crearemos dos objetos en el apartado de javascript. Uno contend
 		border: 0px;
 	}
 
-#. Abrir el navegador y ver que nos aparece el control de capas en el menú lateral. ::
+#. Abrir el navegador. ::
 
 	http://localhost:81/visor/movil.html
 
+#. Ver que nos aparece el control de capas en el menú lateral. 
 
-.. |logo_control_capas| image:: _images/mapa_control_capas.png
-	:align: middle
-	:alt: mapa con control de capas en menú lateral
+	.. |logo_control_capas| image:: _images/mapa_control_capas.png
+		:align: middle
+		:alt: mapa con control de capas en menú lateral
 
-+----------------------+
-| |logo_control_capas| |
-+----------------------+
+	+----------------------+
+	| |logo_control_capas| |
+	+----------------------+
 
 .. [#] http://leafletjs.com/reference-1.0.3.html#control-layers

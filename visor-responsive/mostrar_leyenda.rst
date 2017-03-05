@@ -46,15 +46,17 @@ Agregaremos a nuestro mapa la leyenda de las capas WMS que estén activas. La le
 		document.getElementById("control-leyenda").removeChild(divleyenda);
 	}
    
-#. Abrir el navegador y ver que nos aparece la leyenda en el menú lateral. ::
+#. Abrir el navegador. ::
 
 	http://localhost:81/visor/movil.html
 
 
-		.. |logo_leyenda| image:: _images/mapa_leyenda.png
-			:align: middle
-			:alt: mapa con control de capas en menú lateral
+#. Ver que nos aparece la leyenda en el menú lateral
 
-		+----------------+
-		| |logo_leyenda| |
-		+----------------+
+	.. |logo_leyenda| image:: _images/mapa_leyenda.png
+		:align: middle
+		:alt: mapa con control de capas en menú lateral
+
+	+----------------+
+	| |logo_leyenda| |
+	+----------------+
